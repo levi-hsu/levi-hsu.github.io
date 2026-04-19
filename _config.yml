@@ -1,0 +1,73 @@
+title: "Your Name"
+first_name: "Your"
+last_name: "Name"
+email: "your@email.com"
+description: "Personal Academic Page"
+url: ""
+baseurl: ""
+
+# Profile
+affiliation: "Your University"
+position: "PhD Student"
+photo: "assets/img/prof_pic.jpg"
+
+# Social links (leave empty to hide)
+scholar: ""
+github: ""
+linkedin: ""
+twitter: ""
+orcid: ""
+
+# Build settings
+markdown: kramdown
+kramdown:
+  input: GFM
+  math_engine: mathjax
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: "highlight"
+highlighter: rouge
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Collections
+collections:
+  pages:
+    output: true
+    permalink: /:path/
+  posts:
+    output: true
+    permalink: /blog/:year/:slug/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+
+# Exclude
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor/
+
+# Navigation
+nav:
+  - name: about
+    url: /
+  - name: publications
+    url: /publications/
+  - name: blog
+    url: /blog/
+  - name: notes
+    url: /notes/

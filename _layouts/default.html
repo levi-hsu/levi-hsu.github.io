@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  {% include head.html %}
+</head>
+<body>
+  {% include header.html %}
+  <main class="main-content">
+    {{ content }}
+  </main>
+  {% include footer.html %}
+
+  <!-- BibTeX Modal -->
+  <div class="bib-modal-overlay" id="bib-modal-overlay">
+    <div class="bib-modal" id="bib-modal">
+      <button class="bib-modal-close" id="bib-modal-close" aria-label="Close">
+        <i class="bi bi-x-lg"></i>
+      </button>
+      <h4>BibTeX</h4>
+      <pre class="bib-content" id="bib-content" title="Click to copy"></pre>
+      <span class="bib-copy-hint" id="bib-copy-hint">Click to copy</span>
+    </div>
+  </div>
+
+  <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+</body>
+</html>

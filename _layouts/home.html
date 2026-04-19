@@ -1,0 +1,77 @@
+---
+layout: default
+---
+<div class="home-page">
+
+  <!-- Hero section: photo + intro + contact -->
+  <section class="hero-section">
+    <div class="hero-text">
+      <h1 class="hero-name">
+        <span class="name-first">{{ site.first_name }}</span> {{ site.last_name }}
+      </h1>
+      <p class="hero-meta">{{ site.position }} &middot; {{ site.affiliation }}</p>
+
+      <div class="hero-bio">
+        {{ content }}
+      </div>
+
+      <div class="hero-links">
+        {% if site.email != "" %}
+        <a href="mailto:{{ site.email }}" class="hero-link" aria-label="Email">
+          <i class="bi bi-envelope-fill"></i>
+        </a>
+        {% endif %}
+        {% if site.scholar != "" %}
+        <a href="{{ site.scholar }}" class="hero-link" target="_blank" aria-label="Google Scholar">
+          <i class="bi bi-mortarboard-fill"></i>
+        </a>
+        {% endif %}
+        {% if site.github != "" %}
+        <a href="{{ site.github }}" class="hero-link" target="_blank" aria-label="GitHub">
+          <i class="bi bi-github"></i>
+        </a>
+        {% endif %}
+        {% if site.linkedin != "" %}
+        <a href="{{ site.linkedin }}" class="hero-link" target="_blank" aria-label="LinkedIn">
+          <i class="bi bi-linkedin"></i>
+        </a>
+        {% endif %}
+        {% if site.twitter != "" %}
+        <a href="{{ site.twitter }}" class="hero-link" target="_blank" aria-label="Twitter/X">
+          <i class="bi bi-twitter-x"></i>
+        </a>
+        {% endif %}
+        {% if site.orcid != "" %}
+        <a href="{{ site.orcid }}" class="hero-link" target="_blank" aria-label="ORCID">
+          <i class="bi bi-award-fill"></i>
+        </a>
+        {% endif %}
+      </div>
+    </div>
+
+    <div class="hero-photo">
+      <img src="{{ site.photo | relative_url }}" alt="{{ site.title }}" class="profile-photo">
+      <div class="hero-contact">
+        <p>{{ site.email }}</p>
+        {% if page.office %}<p>{{ page.office }}</p>{% endif %}
+        {% if page.address %}<p>{{ page.address }}</p>{% endif %}
+      </div>
+    </div>
+  </section>
+
+  <!-- News section -->
+  {% if site.data.news %}
+  <section class="news-section">
+    <h2>news</h2>
+    <div class="news-list">
+      {% for item in site.data.news limit:6 %}
+      <div class="news-item">
+        <span class="news-date">{{ item.date }}</span>
+        <span class="news-content">{{ item.content | markdownify | remove: '<p>' | remove: '</p>' }}</span>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+
+</div>

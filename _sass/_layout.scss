@@ -1,0 +1,215 @@
+/* ── Navigation ── */
+.site-header {
+  background: var(--nav-bg);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.3);
+}
+
+.nav-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  height: 52px;
+}
+
+.site-title {
+  color: var(--nav-active);
+  font-weight: 600;
+  font-size: 1rem;
+  flex: 1;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  &:hover { color: var(--nav-active); text-decoration: none; }
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0;
+  margin: 0;
+  li a {
+    color: var(--nav-text);
+    font-size: 0.9rem;
+    padding: 0.3rem 0.6rem;
+    border-radius: 4px;
+    transition: color 0.15s;
+    &:hover, &.active { color: var(--nav-active); text-decoration: none; }
+    &.active { font-weight: 600; }
+  }
+}
+
+.theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--nav-text);
+  font-size: 1rem;
+  padding: 0.3rem 0.5rem;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  transition: color 0.15s;
+  &:hover { color: var(--nav-active); }
+}
+
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: var(--nav-text);
+    border-radius: 2px;
+    transition: 0.2s;
+  }
+}
+
+/* ── Main content ── */
+.main-content {
+  min-height: calc(100vh - 52px - 60px);
+}
+
+/* ── Page wrapper ── */
+.page-content {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+}
+
+.page-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: var(--text);
+}
+
+/* ── Footer ── */
+.site-footer {
+  background: var(--nav-bg);
+  color: var(--nav-text);
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.8rem;
+  a { color: var(--nav-text); text-decoration: underline; }
+}
+
+/* ── BibTeX Modal ── */
+.bib-modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+  &.active { display: flex; }
+}
+
+.bib-modal {
+  background: var(--modal-bg);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1.5rem;
+  max-width: 620px;
+  width: 90%;
+  box-shadow: var(--shadow);
+  position: relative;
+  h4 { margin-bottom: 0.75rem; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted); }
+}
+
+.bib-modal-close {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  &:hover { color: var(--text); }
+}
+
+.bib-content {
+  cursor: pointer;
+  background: var(--code-bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 1em;
+  font-size: 0.8rem;
+  white-space: pre-wrap;
+  word-break: break-all;
+  margin-bottom: 0.5rem;
+  transition: background 0.15s;
+  &:hover { background: var(--bg-alt); }
+  &.copied { border-color: #4caf50; }
+}
+
+.bib-copy-hint {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+/* ── Shared btn-link ── */
+.btn-link {
+  display: inline-block;
+  border: 1px solid var(--btn-border);
+  border-radius: 4px;
+  padding: 0.2em 0.55em;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--btn-text);
+  background: var(--btn-bg);
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+  text-transform: uppercase;
+  font-family: inherit;
+  line-height: 1.6;
+  &:hover, &:focus {
+    background: var(--btn-hover-bg);
+    color: var(--btn-hover-text);
+    border-color: var(--btn-hover-bg);
+    text-decoration: none;
+  }
+}
+
+/* ── Tags ── */
+.tag {
+  display: inline-block;
+  background: var(--tag-bg);
+  color: var(--tag-text);
+  font-size: 0.72rem;
+  padding: 0.15em 0.55em;
+  border-radius: 999px;
+  margin-right: 0.3em;
+}
+
+/* ── Responsive ── */
+@media (max-width: 680px) {
+  .nav-toggle { display: flex; }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 52px;
+    left: 0; right: 0;
+    background: var(--nav-bg);
+    padding: 1rem 1.5rem;
+    gap: 0.5rem;
+    &.open { display: flex; }
+    li a { font-size: 1rem; padding: 0.5rem 0; }
+  }
+  .site-header { position: relative; }
+}

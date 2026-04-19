@@ -1,0 +1,45 @@
+- title: "An Example Paper Title"
+  authors:
+    - name: "Your Name"
+      first_author: true
+      url: ""
+    - name: "Collaborator One"
+      first_author: false
+      url: ""
+  venue: "ICML 2025"
+  venue_url: ""
+  arxiv: "https://arxiv.org/abs/0000.00000"
+  pdf: ""
+  code: ""
+  bibtex: |
+    @inproceedings{yourname2025example,
+      title     = {An Example Paper Title},
+      author    = {Your Name and Collaborator One},
+      booktitle = {Proceedings of the 42nd International Conference on Machine Learning},
+      year      = {2025}
+    }
+  abstract: "This is an optional abstract of your paper. It can contain **Markdown** formatting and even $$\LaTeX$$ math such as $x^2 + y^2 = z^2$."
+  image: ""  # path to paper thumbnail image
+
+- title: "Another Research Work"
+  authors:
+    - name: "Collaborator One"
+      first_author: true
+      url: ""
+    - name: "Your Name"
+      first_author: true
+      url: ""
+  venue: "NeurIPS 2024"
+  venue_url: ""
+  arxiv: ""
+  pdf: ""
+  code: ""
+  bibtex: |
+    @inproceedings{collaborator2024another,
+      title     = {Another Research Work},
+      author    = {Collaborator One and Your Name},
+      booktitle = {Advances in Neural Information Processing Systems},
+      year      = {2024}
+    }
+  abstract: ""
+  image: ""

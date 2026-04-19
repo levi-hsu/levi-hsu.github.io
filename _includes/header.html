@@ -1,0 +1,23 @@
+<header class="site-header">
+  <nav class="nav-container">
+    <a class="site-title" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+    <button class="nav-toggle" aria-label="Toggle navigation" id="nav-toggle">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="nav-links">
+      {% for item in site.nav %}
+      <li>
+        <a href="{{ item.url | relative_url }}"
+           {% if page.url == item.url or page.url == item.url | append: 'index.html' %}class="active"{% endif %}>
+          {{ item.name }}
+        </a>
+      </li>
+      {% endfor %}
+      <li>
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+          <i class="bi bi-moon-fill" id="theme-icon"></i>
+        </button>
+      </li>
+    </ul>
+  </nav>
+</header>

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>An Example Blog Post with LaTeX and References | Your Name</title>
+<meta name="description" content="Personal Academic Page">
+
+<!-- Styles -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!-- Bootstrap Icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+<!-- MathJax -->
+<script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']],
+      tags: 'ams'
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+
+</head>
+<body>
+  <header class="site-header">
+  <nav class="nav-container">
+    <a class="site-title" href="/">Your Name</a>
+    <button class="nav-toggle" aria-label="Toggle navigation" id="nav-toggle">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="nav-links">
+      
+      <li>
+        <a href="/"
+           >
+          about
+        </a>
+      </li>
+      
+      <li>
+        <a href="/publications/"
+           >
+          publications
+        </a>
+      </li>
+      
+      <li>
+        <a href="/blog/"
+           >
+          blog
+        </a>
+      </li>
+      
+      <li>
+        <a href="/notes/"
+           >
+          notes
+        </a>
+      </li>
+      
+      <li>
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+          <i class="bi bi-moon-fill" id="theme-icon"></i>
+        </button>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+  <main class="main-content">
+    <div class="post-layout">
+
+  <!-- Table of Contents sidebar -->
+  <aside class="toc-sidebar" id="toc-sidebar">
+    <div class="toc-inner">
+      <h4>Contents</h4>
+      <nav id="toc-nav"></nav>
+    </div>
+  </aside>
+
+  <!-- Main article -->
+  <article class="post-article">
+    <header class="post-header">
+      <h1 class="post-title">An Example Blog Post with LaTeX and References</h1>
+      <div class="post-meta">
+        <span class="post-date">April 1, 2025</span>
+        
+        <span class="post-tags">
+          <span class="tag">machine learning</span><span class="tag">tutorial</span>
+        </span>
+        
+        
+        <button class="btn-link bib-trigger" data-bib="@misc{yourname2025example,
+  title  = {An Example Blog Post with LaTeX and References},
+  author = {Your Name},
+  year   = {2025},
+  url    = {https://yoursite.com/blog/2025/example-post/}
+}
+">BIB</button>
+        
+      </div>
+      
+      <div class="post-abstract">
+        <strong>Abstract.</strong> This post demonstrates the blog post format: LaTeX math, footnotes, a table of contents, and a reference list. It serves as a template for your own writing.
+      </div>
+      
+    </header>
+
+    <div class="post-content" id="post-content">
+      <h2 id="introduction">Introduction</h2>
+
+<p>This is an example blog post. It supports <strong>Markdown</strong>, $\LaTeX$ math, footnotes<sup id="fnref:1"><a href="#fn:1" class="footnote" rel="footnote" role="doc-noteref">1</a></sup>, and automatic table of contents generation.</p>
+
+<p>Display math works with double-dollar signs:</p>
+
+\[\mathcal{L}(\theta) = \mathbb{E}_{q_\phi(z|x)}\left[\log p_\theta(x|z)\right] - D_{\mathrm{KL}}\!\left(q_\phi(z|x) \,\|\, p(z)\right)\]
+
+<p>This is the evidence lower bound (ELBO) used in variational autoencoders [Kingma &amp; Welling, 2013].</p>
+
+<h2 id="background">Background</h2>
+
+<h3 id="variational-inference">Variational Inference</h3>
+
+<table>
+  <tbody>
+    <tr>
+      <td>Variational inference turns posterior inference into an optimization problem [Blei et al., 2017]. Given observations $x$ and latent variables $z$, we seek to approximate the intractable posterior $p(z</td>
+      <td>x)$ with a tractable family $q_\phi(z</td>
+      <td>x)$.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The KL divergence between $q$ and $p$ satisfies:</p>
+
+\[D_{\mathrm{KL}}(q \| p) = \mathbb{E}_q\left[\log \frac{q(z)}{p(z)}\right] \geq 0\]
+
+<p>with equality if and only if $q = p$ almost everywhere<sup id="fnref:2"><a href="#fn:2" class="footnote" rel="footnote" role="doc-noteref">2</a></sup>.</p>
+
+<h3 id="reparameterization-trick">Reparameterization Trick</h3>
+
+<p>To enable backpropagation through stochastic nodes, we write:</p>
+
+\[z = \mu_\phi(x) + \sigma_\phi(x) \cdot \epsilon, \qquad \epsilon \sim \mathcal{N}(0, I)\]
+
+<h2 id="main-result">Main Result</h2>
+
+<p><strong>Theorem 1</strong> (ELBO Decomposition). <em>For any approximate posterior $q_\phi$,</em></p>
+
+\[\log p_\theta(x) \geq \mathcal{L}(\theta, \phi; x)\]
+
+<table>
+  <tbody>
+    <tr>
+      <td>*with equality when $q_\phi(z</td>
+      <td>x) = p_\theta(z</td>
+      <td>x)$.*</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><em>Proof.</em> Apply Jensen’s inequality to $\log p_\theta(x) = \log \int p_\theta(x,z)\,dz$. $\square$</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>Blog posts support all standard Markdown features, display math, inline math like $\nabla_\theta \mathcal{L}$, code blocks, footnotes, and references.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">torch</span>
+
+<span class="k">def</span> <span class="nf">elbo</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">n_samples</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+    <span class="n">z</span><span class="p">,</span> <span class="n">log_q</span> <span class="o">=</span> <span class="n">model</span><span class="p">.</span><span class="nf">encode</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">n_samples</span><span class="p">)</span>
+    <span class="n">log_p</span> <span class="o">=</span> <span class="n">model</span><span class="p">.</span><span class="nf">decode</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">z</span><span class="p">)</span> <span class="o">+</span> <span class="n">model</span><span class="p">.</span><span class="nf">prior</span><span class="p">(</span><span class="n">z</span><span class="p">)</span>
+    <span class="nf">return </span><span class="p">(</span><span class="n">log_p</span> <span class="o">-</span> <span class="n">log_q</span><span class="p">).</span><span class="nf">mean</span><span class="p">()</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="references">References</h2>
+
+<ul>
+  <li>Kingma, D. P., &amp; Welling, M. (2013). <em>Auto-encoding variational Bayes</em>. arXiv:1312.6114.</li>
+  <li>Blei, D. M., Kucukelbir, A., &amp; McAuliffe, J. D. (2017). <em>Variational inference: A review for statisticians</em>. JASA.</li>
+</ul>
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:1">
+      <p>This is a footnote. Click the arrow to return. <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:2">
+      <p>This follows directly from the definition of KL divergence. <a href="#fnref:2" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+    </div>
+  </article>
+
+</div>
+
+  </main>
+  <footer class="site-footer">
+  <div class="footer-inner">
+    <p>© 2026 Your Name. Powered by <a href="https://jekyllrb.com" target="_blank">Jekyll</a>.</p>
+  </div>
+</footer>
+
+
+  <!-- BibTeX Modal -->
+  <div class="bib-modal-overlay" id="bib-modal-overlay">
+    <div class="bib-modal" id="bib-modal">
+      <button class="bib-modal-close" id="bib-modal-close" aria-label="Close">
+        <i class="bi bi-x-lg"></i>
+      </button>
+      <h4>BibTeX</h4>
+      <pre class="bib-content" id="bib-content" title="Click to copy"></pre>
+      <span class="bib-copy-hint" id="bib-copy-hint">Click to copy</span>
+    </div>
+  </div>
+
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>

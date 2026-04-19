@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2026-04-19T10:43:18+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Your Name</title><subtitle>Personal Academic Page</subtitle><entry><title type="html">An Example Blog Post with LaTeX and References</title><link href="http://localhost:4000/blog/2025/example-post/" rel="alternate" type="text/html" title="An Example Blog Post with LaTeX and References" /><published>2025-04-01T00:00:00+08:00</published><updated>2025-04-01T00:00:00+08:00</updated><id>http://localhost:4000/blog/2025/example-post</id><content type="html" xml:base="http://localhost:4000/blog/2025/example-post/"><![CDATA[<h2 id="introduction">Introduction</h2>
+
+<p>This is an example blog post. It supports <strong>Markdown</strong>, $\LaTeX$ math, footnotes<sup id="fnref:1"><a href="#fn:1" class="footnote" rel="footnote" role="doc-noteref">1</a></sup>, and automatic table of contents generation.</p>
+
+<p>Display math works with double-dollar signs:</p>
+
+\[\mathcal{L}(\theta) = \mathbb{E}_{q_\phi(z|x)}\left[\log p_\theta(x|z)\right] - D_{\mathrm{KL}}\!\left(q_\phi(z|x) \,\|\, p(z)\right)\]
+
+<p>This is the evidence lower bound (ELBO) used in variational autoencoders [Kingma &amp; Welling, 2013].</p>
+
+<h2 id="background">Background</h2>
+
+<h3 id="variational-inference">Variational Inference</h3>
+
+<table>
+  <tbody>
+    <tr>
+      <td>Variational inference turns posterior inference into an optimization problem [Blei et al., 2017]. Given observations $x$ and latent variables $z$, we seek to approximate the intractable posterior $p(z</td>
+      <td>x)$ with a tractable family $q_\phi(z</td>
+      <td>x)$.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The KL divergence between $q$ and $p$ satisfies:</p>
+
+\[D_{\mathrm{KL}}(q \| p) = \mathbb{E}_q\left[\log \frac{q(z)}{p(z)}\right] \geq 0\]
+
+<p>with equality if and only if $q = p$ almost everywhere<sup id="fnref:2"><a href="#fn:2" class="footnote" rel="footnote" role="doc-noteref">2</a></sup>.</p>
+
+<h3 id="reparameterization-trick">Reparameterization Trick</h3>
+
+<p>To enable backpropagation through stochastic nodes, we write:</p>
+
+\[z = \mu_\phi(x) + \sigma_\phi(x) \cdot \epsilon, \qquad \epsilon \sim \mathcal{N}(0, I)\]
+
+<h2 id="main-result">Main Result</h2>
+
+<p><strong>Theorem 1</strong> (ELBO Decomposition). <em>For any approximate posterior $q_\phi$,</em></p>
+
+\[\log p_\theta(x) \geq \mathcal{L}(\theta, \phi; x)\]
+
+<table>
+  <tbody>
+    <tr>
+      <td>*with equality when $q_\phi(z</td>
+      <td>x) = p_\theta(z</td>
+      <td>x)$.*</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><em>Proof.</em> Apply Jensen’s inequality to $\log p_\theta(x) = \log \int p_\theta(x,z)\,dz$. $\square$</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>Blog posts support all standard Markdown features, display math, inline math like $\nabla_\theta \mathcal{L}$, code blocks, footnotes, and references.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">torch</span>
+
+<span class="k">def</span> <span class="nf">elbo</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">n_samples</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+    <span class="n">z</span><span class="p">,</span> <span class="n">log_q</span> <span class="o">=</span> <span class="n">model</span><span class="p">.</span><span class="nf">encode</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">n_samples</span><span class="p">)</span>
+    <span class="n">log_p</span> <span class="o">=</span> <span class="n">model</span><span class="p">.</span><span class="nf">decode</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">z</span><span class="p">)</span> <span class="o">+</span> <span class="n">model</span><span class="p">.</span><span class="nf">prior</span><span class="p">(</span><span class="n">z</span><span class="p">)</span>
+    <span class="nf">return </span><span class="p">(</span><span class="n">log_p</span> <span class="o">-</span> <span class="n">log_q</span><span class="p">).</span><span class="nf">mean</span><span class="p">()</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="references">References</h2>
+
+<ul>
+  <li>Kingma, D. P., &amp; Welling, M. (2013). <em>Auto-encoding variational Bayes</em>. arXiv:1312.6114.</li>
+  <li>Blei, D. M., Kucukelbir, A., &amp; McAuliffe, J. D. (2017). <em>Variational inference: A review for statisticians</em>. JASA.</li>
+</ul>
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:1">
+      <p>This is a footnote. Click the arrow to return. <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:2">
+      <p>This follows directly from the definition of KL divergence. <a href="#fnref:2" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>]]></content><author><name></name></author><category term="machine learning" /><category term="tutorial" /><summary type="html"><![CDATA[Introduction]]></summary></entry></feed>

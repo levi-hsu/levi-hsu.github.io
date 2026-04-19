@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>about | Your Name</title>
+<meta name="description" content="Personal Academic Page">
+
+<!-- Styles -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!-- Bootstrap Icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+<!-- MathJax -->
+<script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']],
+      tags: 'ams'
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+
+</head>
+<body>
+  <header class="site-header">
+  <nav class="nav-container">
+    <a class="site-title" href="/">Your Name</a>
+    <button class="nav-toggle" aria-label="Toggle navigation" id="nav-toggle">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="nav-links">
+      
+      <li>
+        <a href="/"
+           class="active">
+          about
+        </a>
+      </li>
+      
+      <li>
+        <a href="/publications/"
+           >
+          publications
+        </a>
+      </li>
+      
+      <li>
+        <a href="/blog/"
+           >
+          blog
+        </a>
+      </li>
+      
+      <li>
+        <a href="/notes/"
+           >
+          notes
+        </a>
+      </li>
+      
+      <li>
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+          <i class="bi bi-moon-fill" id="theme-icon"></i>
+        </button>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+  <main class="main-content">
+    <div class="home-page">
+
+  <!-- Hero section: photo + intro + contact -->
+  <section class="hero-section">
+    <div class="hero-text">
+      <h1 class="hero-name">
+        <span class="name-first">Your</span> Name
+      </h1>
+      <p class="hero-meta">PhD Student &middot; Your University</p>
+
+      <div class="hero-bio">
+        <p>Write your biography here. Tell the world about yourself and your research interests. You can use <strong>Markdown</strong> formatting and even link to your <a href="/publications/">publications</a>.</p>
+
+<p>My research focuses on machine learning, optimization, and probabilistic modeling. I am particularly interested in developing scalable algorithms for large-scale inference problems.</p>
+
+      </div>
+
+      <div class="hero-links">
+        
+        <a href="mailto:your@email.com" class="hero-link" aria-label="Email">
+          <i class="bi bi-envelope-fill"></i>
+        </a>
+        
+        
+        
+        
+        
+        
+      </div>
+    </div>
+
+    <div class="hero-photo">
+      <img src="/assets/img/prof_pic.jpg" alt="Your Name" class="profile-photo">
+      <div class="hero-contact">
+        <p>your@email.com</p>
+        <p>Room 000, Building Name</p>
+        <p>University, City, State 00000</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- News section -->
+  
+  <section class="news-section">
+    <h2>news</h2>
+    <div class="news-list">
+      
+      <div class="news-item">
+        <span class="news-date">Apr 2025</span>
+        <span class="news-content">New paper accepted at ICML 2025!
+</span>
+      </div>
+      
+      <div class="news-item">
+        <span class="news-date">Jan 2025</span>
+        <span class="news-content">New blog post on sparse differentiation.
+</span>
+      </div>
+      
+      <div class="news-item">
+        <span class="news-date">Oct 2024</span>
+        <span class="news-content">Started PhD at Your University.
+</span>
+      </div>
+      
+    </div>
+  </section>
+  
+
+</div>
+
+  </main>
+  <footer class="site-footer">
+  <div class="footer-inner">
+    <p>© 2026 Your Name. Powered by <a href="https://jekyllrb.com" target="_blank">Jekyll</a>.</p>
+  </div>
+</footer>
+
+
+  <!-- BibTeX Modal -->
+  <div class="bib-modal-overlay" id="bib-modal-overlay">
+    <div class="bib-modal" id="bib-modal">
+      <button class="bib-modal-close" id="bib-modal-close" aria-label="Close">
+        <i class="bi bi-x-lg"></i>
+      </button>
+      <h4>BibTeX</h4>
+      <pre class="bib-content" id="bib-content" title="Click to copy"></pre>
+      <span class="bib-copy-hint" id="bib-copy-hint">Click to copy</span>
+    </div>
+  </div>
+
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>

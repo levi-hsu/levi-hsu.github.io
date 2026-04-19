@@ -1,0 +1,15 @@
+- title: "Variational Inference: A Comprehensive Review"
+  date: "2024-03-15"
+  tags:
+    - "machine learning"
+    - "probabilistic models"
+  drive: "https://drive.google.com/..."
+  abstract: "A detailed study note on variational inference methods, covering ELBO derivation, mean-field approximation, and reparameterization tricks."
+
+- title: "Riemannian Geometry for Machine Learning"
+  date: "2024-01-10"
+  tags:
+    - "geometry"
+    - "optimization"
+  drive: ""
+  abstract: "Notes on Riemannian manifolds, geodesics, and their application to neural network optimization on curved spaces."

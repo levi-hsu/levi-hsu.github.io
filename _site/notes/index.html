@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>notes | Your Name</title>
+<meta name="description" content="Personal Academic Page">
+
+<!-- Styles -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!-- Bootstrap Icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+<!-- MathJax -->
+<script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']],
+      tags: 'ams'
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+
+</head>
+<body>
+  <header class="site-header">
+  <nav class="nav-container">
+    <a class="site-title" href="/">Your Name</a>
+    <button class="nav-toggle" aria-label="Toggle navigation" id="nav-toggle">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="nav-links">
+      
+      <li>
+        <a href="/"
+           >
+          about
+        </a>
+      </li>
+      
+      <li>
+        <a href="/publications/"
+           >
+          publications
+        </a>
+      </li>
+      
+      <li>
+        <a href="/blog/"
+           >
+          blog
+        </a>
+      </li>
+      
+      <li>
+        <a href="/notes/"
+           class="active">
+          notes
+        </a>
+      </li>
+      
+      <li>
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+          <i class="bi bi-moon-fill" id="theme-icon"></i>
+        </button>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+  <main class="main-content">
+    <div class="notes-page">
+  <h1 class="page-title">notes</h1>
+
+  <div class="pub-list">
+    
+    <div class="pub-entry">
+
+      <!-- Note icon -->
+      <div class="pub-image">
+        <div class="pub-image-placeholder">
+          <i class="bi bi-journal-text"></i>
+        </div>
+      </div>
+
+      <!-- Note details -->
+      <div class="pub-details">
+        <h3 class="pub-title">Variational Inference: A Comprehensive Review</h3>
+
+        <p class="pub-venue">
+          <em>March 2024</em>
+        </p>
+
+        
+        <div class="note-tags">
+          <span class="tag">machine learning</span><span class="tag">probabilistic models</span>
+        </div>
+        
+
+        <!-- Links -->
+        <div class="pub-links">
+          
+          <a class="btn-link" href="https://drive.google.com/..." target="_blank">
+            <i class="bi bi-google" style="font-size:0.75em; margin-right:2px;"></i>Drive
+          </a>
+          
+        </div>
+
+        <!-- Abstract -->
+        
+        <div class="pub-abstract">
+          <p>A detailed study note on variational inference methods, covering ELBO derivation, mean-field approximation, and reparameterization tricks.</p>
+
+        </div>
+        
+      </div>
+
+    </div>
+    
+    <div class="pub-entry">
+
+      <!-- Note icon -->
+      <div class="pub-image">
+        <div class="pub-image-placeholder">
+          <i class="bi bi-journal-text"></i>
+        </div>
+      </div>
+
+      <!-- Note details -->
+      <div class="pub-details">
+        <h3 class="pub-title">Riemannian Geometry for Machine Learning</h3>
+
+        <p class="pub-venue">
+          <em>January 2024</em>
+        </p>
+
+        
+        <div class="note-tags">
+          <span class="tag">geometry</span><span class="tag">optimization</span>
+        </div>
+        
+
+        <!-- Links -->
+        <div class="pub-links">
+          
+        </div>
+
+        <!-- Abstract -->
+        
+        <div class="pub-abstract">
+          <p>Notes on Riemannian manifolds, geodesics, and their application to neural network optimization on curved spaces.</p>
+
+        </div>
+        
+      </div>
+
+    </div>
+    
+  </div>
+</div>
+
+  </main>
+  <footer class="site-footer">
+  <div class="footer-inner">
+    <p>© 2026 Your Name. Powered by <a href="https://jekyllrb.com" target="_blank">Jekyll</a>.</p>
+  </div>
+</footer>
+
+
+  <!-- BibTeX Modal -->
+  <div class="bib-modal-overlay" id="bib-modal-overlay">
+    <div class="bib-modal" id="bib-modal">
+      <button class="bib-modal-close" id="bib-modal-close" aria-label="Close">
+        <i class="bi bi-x-lg"></i>
+      </button>
+      <h4>BibTeX</h4>
+      <pre class="bib-content" id="bib-content" title="Click to copy"></pre>
+      <span class="bib-copy-hint" id="bib-copy-hint">Click to copy</span>
+    </div>
+  </div>
+
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>
