@@ -57,7 +57,7 @@ $$
 \log p_\theta(x) \geq \mathcal{L}(\theta, \phi; x)
 $$
 
-*with equality when $q_\phi(z|x) = p_\theta(z|x)$.*
+with equality when $q_\phi(z|x) = p_\theta(z|x)$.
 
 *Proof.* Apply Jensen's inequality to $\log p_\theta(x) = \log \int p_\theta(x,z)\,dz$. $\square$
 
