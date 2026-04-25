@@ -1,3 +1,30 @@
+/* ── Page transitions ── */
+(function () {
+  var main = document.querySelector('.main-content');
+  if (!main) return;
+
+  document.addEventListener('click', function (e) {
+    // Find the closest anchor that is an internal same-origin page link
+    var a = e.target.closest('a[href]');
+    if (!a) return;
+
+    var href = a.getAttribute('href');
+    // Skip: external links, hash-only anchors, BIB buttons, download links
+    if (!href || href.startsWith('#') || href.startsWith('mailto:') ||
+        a.hostname !== location.hostname || a.hasAttribute('download') ||
+        a.target === '_blank') return;
+
+    e.preventDefault();
+    var dest = a.href;
+
+    // Fade out, then navigate
+    main.classList.add('page-fade-out');
+    main.addEventListener('animationend', function () {
+      window.location.href = dest;
+    }, { once: true });
+  });
+})();
+
 /* ── Theme Toggle ── */
 (function () {
   const root = document.documentElement;

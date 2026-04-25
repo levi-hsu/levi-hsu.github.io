@@ -25,12 +25,11 @@ permalink: /blog/
       <p class="blog-entry-abstract">{{ post.abstract }}</p>
       {% endif %}
 
+      {% if post.bibtex and post.bibtex != "" %}
       <div class="blog-entry-links">
-        <a class="btn-link" href="{{ post.url | relative_url }}">Read</a>
-        {% if post.bibtex and post.bibtex != "" %}
         <button class="btn-link bib-trigger" data-bib="{{ post.bibtex | escape }}">BIB</button>
-        {% endif %}
       </div>
+      {% endif %}
     </div>
     {% endfor %}
   </div>
