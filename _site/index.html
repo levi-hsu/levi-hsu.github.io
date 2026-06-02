@@ -113,7 +113,24 @@
     </div>
 
     <div class="hero-photo">
-      <img src="/assets/img/prof_pic.PNG" alt="Le-Rong Hsu" class="profile-photo">
+      <picture>
+        <source
+          type="image/webp"
+          srcset="/assets/img/prof_pic-200.webp 200w,
+                  /assets/img/prof_pic-400.webp 400w"
+          sizes="(max-width: 680px) 150px, 200px">
+        <img
+          src="/assets/img/prof_pic-200.jpg"
+          srcset="/assets/img/prof_pic-200.jpg 200w,
+                  /assets/img/prof_pic-400.jpg 400w"
+          sizes="(max-width: 680px) 150px, 200px"
+          alt="Le-Rong Hsu"
+          class="profile-photo"
+          width="200"
+          height="200"
+          loading="eager"
+          decoding="async">
+      </picture>
       <div class="hero-contact">
         <p>leronglevi@gmail.com</p>
         
