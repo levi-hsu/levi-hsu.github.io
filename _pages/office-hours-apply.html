@@ -22,15 +22,15 @@ permalink: /office-hours/apply/
     </p>
   </div> -->
 
-  <form action="https://formspree.io/f/mwvzgalp" method="POST" enctype="multipart/form-data">
+  <form action="https://formspree.io/f/mwvzgalp" method="POST">
     <input type="hidden" name="subject" value="New free learning help request">
     <input type="hidden" name="source_page" value="office-hours-apply">
     <input id="form-language" type="hidden" name="form_language" value="English">
-
+<!-- 
     <div class="form-section">
       <h2><span data-lang-panel="en">Contact</span><span data-lang-panel="zh" hidden>聯絡方式</span></h2>
       <p><span data-lang-panel="en">I will use this only to reply to your request.</span><span data-lang-panel="zh" hidden>我只會用這些資訊回覆你的申請。</span></p>
-    </div>
+    </div> -->
 
     <div class="form-field">
       <label for="name"><span data-lang-panel="en">Name</span><span data-lang-panel="zh" hidden>姓名</span></label>
@@ -69,10 +69,8 @@ permalink: /office-hours/apply/
       <label for="service-type"><span data-lang-panel="en">Service type</span><span data-lang-panel="zh" hidden>服務類型</span></label>
       <select id="service-type" name="service_type" required>
         <option value="">Select one</option>
-        <option value="Mathematical thinking">Mathematical thinking</option>
-        <option value="Graduate school applications">Graduate school applications</option>
-        <option value="Self-directed research">Self-directed research</option>
-        <option value="Research advising">Research advising</option>
+        <option value="Mathematical thinking">Tutoring</option>
+        <option value="Graduate school applications">Graduate school application sharing</option>
         <option value="Learning partner">Learning partner</option>
       </select>
     </div>
@@ -99,7 +97,7 @@ permalink: /office-hours/apply/
     </div>
 
     <div class="form-field">
-      <label for="subject-area"><span data-lang-panel="en">Subject area</span><span data-lang-panel="zh" hidden>主題領域</span></label>
+      <label for="subject-area"><span data-lang-panel="en">Subject area</span><span data-lang-panel="zh" hidden>科目/領域</span></label>
       <input id="subject-area" name="subject_area" type="text" placeholder="For example: probability, real analysis, graduate applications" required>
     </div>
 
@@ -109,21 +107,12 @@ permalink: /office-hours/apply/
     </div>
 
     <div class="form-field">
-      <label for="materials-link"><span data-lang-panel="en">Link to problem set / notes / file</span><span data-lang-panel="zh" hidden>問題集、筆記或檔案連結</span></label>
+      <label for="materials-link"><span data-lang-panel="en">Link to problem set / notes / file</span><span data-lang-panel="zh" hidden>作業、筆記或檔案連結</span></label>
       <input id="materials-link" name="materials_link" type="url" placeholder="https://">
-      <p class="field-note"><span data-lang-panel="en">Google Drive, Dropbox, GitHub, Overleaf, a PDF link, or another shared file link is fine.</span><span data-lang-panel="zh" hidden>可以使用 Google Drive、Dropbox、GitHub、Overleaf、PDF 連結，或其他共享檔案連結。</span></p>
-    </div>
-
-    <div class="form-field">
-      <label><span data-lang-panel="en">Problem set, notes, or related files</span><span data-lang-panel="zh" hidden>問題集、筆記或相關檔案</span></label>
-      <div class="file-stack">
-        <input id="material-file-1" name="material_file_1" type="file" accept=".jpg,.jpeg,.png,.pdf,image/jpeg,image/png,application/pdf">
-        <input id="material-file-2" name="material_file_2" type="file" accept=".jpg,.jpeg,.png,.pdf,image/jpeg,image/png,application/pdf">
-        <input id="material-file-3" name="material_file_3" type="file" accept=".jpg,.jpeg,.png,.pdf,image/jpeg,image/png,application/pdf">
-        <input id="material-file-4" name="material_file_4" type="file" accept=".jpg,.jpeg,.png,.pdf,image/jpeg,image/png,application/pdf">
-        <input id="material-file-5" name="material_file_5" type="file" accept=".jpg,.jpeg,.png,.pdf,image/jpeg,image/png,application/pdf">
-      </div>
-      <p class="field-note"><span data-lang-panel="en">Optional. Upload up to 5 files. JPG, PNG, and PDF only.</span><span data-lang-panel="zh" hidden>選填。最多上傳 5 個檔案，僅限 JPG、PNG 與 PDF。</span></p>
+      <p class="field-note">
+        <span data-lang-panel="en">Google Drive, Dropbox, OneDrive, GitHub, Overleaf, a PDF link, or another shared file link is fine. Please make sure I can open the link, or you can send me the files by email directly instead.</span>
+        <span data-lang-panel="zh" hidden>可以使用 Google Drive、Dropbox、OneDrive、GitHub、Overleaf、PDF 連結，或其他共享檔案連結。請確認我能開啟連結；或者你也可以直接用 email 把檔案寄給我。</span>
+      </p>
     </div>
 
     <div class="form-field">

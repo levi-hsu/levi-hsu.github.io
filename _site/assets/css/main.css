@@ -1147,10 +1147,6 @@ sup {
   box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 18%, transparent);
   outline: none;
 }
-.office-hours-form input[type=file] {
-  background: var(--bg-alt);
-  cursor: pointer;
-}
 .office-hours-form select {
   cursor: pointer;
 }

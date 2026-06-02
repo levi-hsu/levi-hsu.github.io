@@ -158,16 +158,6 @@
     }
   }
 
-  input[type="file"] {
-    background: var(--bg-alt);
-    cursor: pointer;
-  }
-
-  .file-stack {
-    display: grid;
-    gap: 0.55rem;
-  }
-
   select {
     cursor: pointer;
   }
