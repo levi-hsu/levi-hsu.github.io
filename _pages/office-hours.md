@@ -79,14 +79,14 @@ permalink: /free-help/
     <section class="office-hours-section">
       <h2>我可以協助的方向</h2>
       <ul>
-        <li>家教：如果你無法負擔高額的家教費用，我可以幫您 (但請先閱讀以下資訊)。</li>
+        <li>家教：若您無法負擔高額的家教費用，我可以幫您 (但請先閱讀以下資訊)。</li>
         <li>申請學校經驗分享。</li>
         <li>學習夥伴：您可以分享自己學到的內容，我會聆聽、提問，並給予回饋。</li>
       </ul>
     </section>
 
     <section class="office-hours-section">
-      <h2>我無法協助的內容</h2>
+      <h2>無法協助的內容</h2>
       <ul>
         <li>無法提供作業代寫。</li>
         <li>無法提供數學競賽或奧林匹亞相關解題服務。</li>
@@ -108,7 +108,7 @@ permalink: /free-help/
     <section class="office-hours-section">
       <h2>填寫前請先準備</h2>
       <p>
-        請清楚描述您的情況，並附上相關材料，例如作業、筆記、論文、Overleaf 專案、GitHub repository，或共享雲端資料夾。具體的問題比籠統的請求更容易得到有用回應哦～
+        請清楚描述您的情況，並附上相關內容，例如作業、筆記、論文、Overleaf 連結、GitHub repository，或共享雲端資料夾。具體的問題比籠統的請求更容易得到有用回應哦～
       </p>
     </section>
 
