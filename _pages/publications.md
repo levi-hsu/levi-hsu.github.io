@@ -6,10 +6,13 @@ permalink: /publications/
 <div class="publications-page">
   <h1 class="page-title">publications</h1>
 
+  {% assign pubs = site.data.publications | where_exp: "p", "p.title" %}
+  {% if pubs.size > 0 %}
+
   <p class="pub-note"><sup>*</sup> Equal contribution &nbsp; <sup>†</sup> Corresponding author</p>
 
   <div class="pub-list">
-    {% for pub in site.data.publications %}
+    {% for pub in pubs %}
     <div class="pub-entry">
 
       <!-- Paper image / thumbnail -->
@@ -62,7 +65,7 @@ permalink: /publications/
           {% endif %}
         </div>
 
-        <!-- Abstract (collapsible) -->
+        <!-- Abstract -->
         {% if pub.abstract and pub.abstract != "" %}
         <div class="pub-abstract">
           {{ pub.abstract | markdownify }}
@@ -73,4 +76,18 @@ permalink: /publications/
     </div>
     {% endfor %}
   </div>
+
+  {% else %}
+
+  <div class="empty-state">
+    <div class="empty-state-icon">📭</div>
+    <h2 class="empty-state-title">Nothing here (yet)</h2>
+    <p class="empty-state-msg">
+      Papers are like buses:<br>
+      you wait for ages, then three arrive at once.<br>
+      <span class="empty-state-sub">Currently at the waiting stage.</span>
+    </p>
+  </div>
+
+  {% endif %}
 </div>

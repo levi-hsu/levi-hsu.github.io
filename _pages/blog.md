@@ -6,6 +6,7 @@ permalink: /blog/
 <div class="blog-page">
   <h1 class="page-title">blog</h1>
 
+  {% if site.posts.size > 0 %}
   <div class="blog-list">
     {% assign sorted_posts = site.posts | sort: 'date' | reverse %}
     {% for post in sorted_posts %}
@@ -33,4 +34,18 @@ permalink: /blog/
     </div>
     {% endfor %}
   </div>
+
+  {% else %}
+
+  <div class="empty-state">
+    <div class="empty-state-icon">🌱</div>
+    <h2 class="empty-state-title">The blog is on sabbatical</h2>
+    <p class="empty-state-msg">
+      The author is out collecting thoughts.<br>
+      Good ideas take time —<br>
+      <span class="empty-state-sub">or so the author keeps saying.</span>
+    </p>
+  </div>
+
+  {% endif %}
 </div>

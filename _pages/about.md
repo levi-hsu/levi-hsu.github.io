@@ -2,10 +2,11 @@
 layout: home
 title: about
 permalink: /
-office: "Room 000, Building Name"
-address: "University, City"
+# office: "Room 000, Building Name"
+# address: "University, City"
 ---
 
-Write your biography here. Tell the world about yourself and your research interests. You can use **Markdown** formatting and even link to your [publications](/publications/).
-
-My research focuses on A, B, C, D, and E.
+I obtained my Bachelor degree (Math) from National Taiwan University with a minor in Foreign Languages and Literatures. 
+- optimal transport, stochastic analysis
+- mathematics of reinforcement learning
+- generative modeling (e.g. McKean-Vlasov SDEs)
