@@ -6,7 +6,7 @@ permalink: /
 # address: "University, City"
 ---
 
-I obtained my Bachelor degree (Math) from National Taiwan University with a minor in Foreign Languages and Literatures. 
+I obtained my bachelor’s degree in Mathematics from National Taiwan University, with a minor in Foreign Languages and Literatures.
 - optimal transport, stochastic analysis
 - mathematics of reinforcement learning
 - generative modeling

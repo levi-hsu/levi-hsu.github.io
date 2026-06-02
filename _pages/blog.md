@@ -45,7 +45,7 @@ permalink: /blog/
 
   <div class="empty-state">
     <div class="empty-state-icon">🌱</div>
-    <h2 class="empty-state-title">The blog is on sabbatical</h2>
+    <h2 class="empty-state-title">The blog is on summer vacation</h2>
     <p class="empty-state-msg">
       The author is out collecting thoughts.<br>
       Good ideas take time —<br>
