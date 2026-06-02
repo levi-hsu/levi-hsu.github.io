@@ -5,28 +5,45 @@ permalink: /office-hours/apply/
 ---
 
 <div class="office-hours-form">
-  <p class="form-intro">
-    Use this form to send the information I need before deciding whether a written reply or an online meeting would be useful. The form is intentionally plain; the question itself matters most.
-  </p>
+  <div class="language-switch" role="group" aria-label="Choose language">
+    <button class="language-option active" type="button" data-lang-switch="en">English</button>
+    <button class="language-option" type="button" data-lang-switch="zh">繁體中文</button>
+  </div>
+
+  <div data-lang-panel="en">
+    <p class="form-intro">
+      Use this form to send the information I need before deciding whether a written reply or an online meeting would be useful. The form is intentionally plain; the question itself matters most.
+    </p>
+  </div>
+
+  <div data-lang-panel="zh" hidden>
+    <p class="form-intro">
+      請用這份表單提供我判斷是否能協助所需的資訊。表單刻意保持簡單，最重要的是問題本身。
+    </p>
+  </div>
 
   <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" enctype="multipart/form-data">
+    <input type="hidden" name="subject" value="New free learning help request">
+    <input type="hidden" name="source_page" value="office-hours-apply">
+    <input id="form-language" type="hidden" name="form_language" value="English">
+
     <div class="form-section">
-      <h2>Contact</h2>
-      <p>I will use this only to reply to your request.</p>
+      <h2><span data-lang-panel="en">Contact</span><span data-lang-panel="zh" hidden>聯絡方式</span></h2>
+      <p><span data-lang-panel="en">I will use this only to reply to your request.</span><span data-lang-panel="zh" hidden>我只會用這些資訊回覆你的申請。</span></p>
     </div>
 
     <div class="form-field">
-      <label for="name">Name</label>
+      <label for="name"><span data-lang-panel="en">Name</span><span data-lang-panel="zh" hidden>姓名</span></label>
       <input id="name" name="name" type="text" autocomplete="name" required>
     </div>
 
     <div class="form-field">
-      <label for="email">Email</label>
+      <label for="email"><span data-lang-panel="en">Email</span><span data-lang-panel="zh" hidden>Email</span></label>
       <input id="email" name="email" type="email" autocomplete="email" required>
     </div>
 
     <div class="form-field">
-      <label for="preferred-language">Preferred language</label>
+      <label for="preferred-language"><span data-lang-panel="en">Preferred language</span><span data-lang-panel="zh" hidden>偏好的溝通語言</span></label>
       <select id="preferred-language" name="preferred_language" required>
         <option value="">Select one</option>
         <option value="English">English</option>
@@ -35,12 +52,12 @@ permalink: /office-hours/apply/
     </div>
 
     <div class="form-section">
-      <h2>Request</h2>
-      <p>These details help me understand the kind of help you are asking for.</p>
+      <h2><span data-lang-panel="en">Request</span><span data-lang-panel="zh" hidden>申請內容</span></h2>
+      <p><span data-lang-panel="en">These details help me understand the kind of help you are asking for.</span><span data-lang-panel="zh" hidden>這些資訊會幫助我理解你需要哪一類協助。</span></p>
     </div>
 
     <fieldset class="form-field">
-      <legend>Preferred help format</legend>
+      <legend><span data-lang-panel="en">Preferred help format</span><span data-lang-panel="zh" hidden>偏好的協助形式</span></legend>
       <div class="choice-group">
         <label class="choice"><input type="radio" name="help_format" value="Written reply" required> Written reply</label>
         <label class="choice"><input type="radio" name="help_format" value="Online meeting"> Online meeting</label>
@@ -49,7 +66,7 @@ permalink: /office-hours/apply/
     </fieldset>
 
     <div class="form-field">
-      <label for="service-type">Service type</label>
+      <label for="service-type"><span data-lang-panel="en">Service type</span><span data-lang-panel="zh" hidden>服務類型</span></label>
       <select id="service-type" name="service_type" required>
         <option value="">Select one</option>
         <option value="Mathematical thinking">Mathematical thinking</option>
@@ -61,7 +78,7 @@ permalink: /office-hours/apply/
     </div>
 
     <div class="form-field">
-      <label for="academic-level">Academic level</label>
+      <label for="academic-level"><span data-lang-panel="en">Academic level</span><span data-lang-panel="zh" hidden>學習階段</span></label>
       <select id="academic-level" name="academic_level" required>
         <option value="">Select one</option>
         <option value="Secondary">Secondary</option>
@@ -72,46 +89,50 @@ permalink: /office-hours/apply/
     </div>
 
     <div class="form-field">
-      <label for="region">Nationality or region</label>
+      <label for="region"><span data-lang-panel="en">Nationality or region</span><span data-lang-panel="zh" hidden>國籍或所在地區</span></label>
       <input id="region" name="nationality_or_region" type="text" autocomplete="country-name" required>
     </div>
 
     <div class="form-field">
-      <label for="institution">Institution <span class="field-note">(optional)</span></label>
+      <label for="institution"><span data-lang-panel="en">Institution <span class="field-note">(optional)</span></span><span data-lang-panel="zh" hidden>學校或機構 <span class="field-note">（選填）</span></span></label>
       <input id="institution" name="institution" type="text" autocomplete="organization">
     </div>
 
     <div class="form-field">
-      <label for="subject-area">Subject area</label>
+      <label for="subject-area"><span data-lang-panel="en">Subject area</span><span data-lang-panel="zh" hidden>主題領域</span></label>
       <input id="subject-area" name="subject_area" type="text" placeholder="For example: probability, real analysis, graduate applications" required>
     </div>
 
     <div class="form-field">
-      <label for="question">Question or situation</label>
+      <label for="question"><span data-lang-panel="en">Question or situation</span><span data-lang-panel="zh" hidden>問題或目前情況</span></label>
       <textarea id="question" name="question_or_situation" required></textarea>
     </div>
 
     <div class="form-field">
-      <label for="materials-link">Link to problem set / notes / file</label>
+      <label for="materials-link"><span data-lang-panel="en">Link to problem set / notes / file</span><span data-lang-panel="zh" hidden>問題集、筆記或檔案連結</span></label>
       <input id="materials-link" name="materials_link" type="url" placeholder="https://">
-      <p class="field-note">Google Drive, Dropbox, GitHub, Overleaf, a PDF link, or another shared file link is fine.</p>
+      <p class="field-note"><span data-lang-panel="en">Google Drive, Dropbox, GitHub, Overleaf, a PDF link, or another shared file link is fine.</span><span data-lang-panel="zh" hidden>可以使用 Google Drive、Dropbox、GitHub、Overleaf、PDF 連結，或其他共享檔案連結。</span></p>
     </div>
 
     <div class="form-field">
-      <label for="problem-photos">Photos of problem set or notes</label>
+      <label for="problem-photos"><span data-lang-panel="en">Photos of problem set or notes</span><span data-lang-panel="zh" hidden>問題集或筆記照片</span></label>
       <input id="problem-photos" name="problem_photos[]" type="file" accept="image/jpeg,image/png" multiple>
-      <p class="field-note">Optional. Upload up to 5 photos. JPG and PNG only.</p>
+      <p class="field-note"><span data-lang-panel="en">Optional. Upload up to 5 photos. JPG and PNG only.</span><span data-lang-panel="zh" hidden>選填。最多上傳 5 張照片，僅限 JPG 與 PNG。</span></p>
     </div>
 
     <div class="form-field">
-      <label for="availability">Timezone and rough availability</label>
+      <label for="availability"><span data-lang-panel="en">Timezone and rough availability</span><span data-lang-panel="zh" hidden>時區與大致可討論時間</span></label>
       <textarea id="availability" name="timezone_and_availability" placeholder="Only needed if an online meeting may be useful."></textarea>
     </div>
 
     <div class="form-actions">
-      <button class="btn-link submit-button" type="submit">Submit request</button>
+      <button class="btn-link submit-button" type="submit"><span data-lang-panel="en">Submit request</span><span data-lang-panel="zh" hidden>送出申請</span></button>
     </div>
   </form>
+
+  <p class="form-report-note">
+    The recipient email is configured in Formspree, not in this static page. After the final address is chosen, set it in the Formspree notification workflow for this form.
+  </p>
 </div>
 
 <script>
@@ -125,5 +146,37 @@ permalink: /office-hours/apply/
         window.alert('Please upload at most 5 photos.');
       }
     });
+  })();
+
+  (function () {
+    var buttons = document.querySelectorAll('[data-lang-switch]');
+    var panels = document.querySelectorAll('[data-lang-panel]');
+    var formLanguage = document.getElementById('form-language');
+    if (!buttons.length || !panels.length) return;
+
+    function setLanguage(lang) {
+      buttons.forEach(function (button) {
+        button.classList.toggle('active', button.dataset.langSwitch === lang);
+      });
+      panels.forEach(function (panel) {
+        panel.hidden = panel.dataset.langPanel !== lang;
+      });
+      if (formLanguage) {
+        formLanguage.value = lang === 'zh' ? 'Traditional Chinese' : 'English';
+      }
+      try {
+        window.localStorage.setItem('officeHoursLanguage', lang);
+      } catch (e) {}
+    }
+
+    buttons.forEach(function (button) {
+      button.addEventListener('click', function () {
+        setLanguage(button.dataset.langSwitch);
+      });
+    });
+
+    var params = new URLSearchParams(window.location.search);
+    var initial = params.get('lang') || window.localStorage.getItem('officeHoursLanguage') || 'en';
+    setLanguage(initial === 'zh' ? 'zh' : 'en');
   })();
 </script>
