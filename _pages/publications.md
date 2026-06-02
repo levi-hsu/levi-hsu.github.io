@@ -15,16 +15,12 @@ permalink: /publications/
     {% for pub in pubs %}
     <div class="pub-entry">
 
-      <!-- Paper image / thumbnail -->
+      <!-- Paper thumbnail — only rendered when pub.image is set -->
+      {% if pub.image and pub.image != "" %}
       <div class="pub-image">
-        {% if pub.image and pub.image != "" %}
         <img src="{{ pub.image | relative_url }}" alt="{{ pub.title }}">
-        {% else %}
-        <div class="pub-image-placeholder">
-          <i class="bi bi-file-earmark-text"></i>
-        </div>
-        {% endif %}
       </div>
+      {% endif %}
 
       <!-- Paper details -->
       <div class="pub-details">

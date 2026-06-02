@@ -10,12 +10,13 @@ permalink: /notes/
     {% for note in site.data.notes %}
     <div class="pub-entry">
 
-      <!-- Note icon -->
+      <!-- Note thumbnail — uncomment and set note.image to enable
+      {% if note.image and note.image != "" %}
       <div class="pub-image">
-        <div class="pub-image-placeholder">
-          <i class="bi bi-journal-text"></i>
-        </div>
+        <img src="{{ note.image | relative_url }}" alt="{{ note.title }}">
       </div>
+      {% endif %}
+      -->
 
       <!-- Note details -->
       <div class="pub-details">

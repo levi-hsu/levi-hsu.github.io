@@ -11,6 +11,12 @@ permalink: /blog/
     {% assign sorted_posts = site.posts | sort: 'date' | reverse %}
     {% for post in sorted_posts %}
     <div class="blog-entry">
+      <!-- Blog thumbnail — only rendered when post.image is set -->
+      {% if post.image and post.image != "" %}
+      <div class="pub-image" style="margin-bottom:0.75rem;">
+        <img src="{{ post.image | relative_url }}" alt="{{ post.title }}">
+      </div>
+      {% endif %}
       <div class="blog-entry-header">
         <a class="blog-entry-title" href="{{ post.url | relative_url }}">{{ post.title }}</a>
         <span class="blog-entry-date">{{ post.date | date: "%b %-d, %Y" }}</span>
