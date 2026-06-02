@@ -9,18 +9,13 @@ layout: default
       <h1 class="hero-name">
         <span class="name-first">{{ site.first_name }}</span> {{ site.last_name }}
       </h1>
-      <p class="hero-meta">{{ site.position }} &middot; {{ site.affiliation }}</p>
+      <p class="hero-meta">{{ site.affiliation }}<br>{{ site.position }}</p>
 
       <div class="hero-bio">
         {{ content }}
       </div>
 
       <div class="hero-links">
-        {% if site.email != "" %}
-        <a href="mailto:{{ site.email }}" class="hero-link" aria-label="Email">
-          <i class="bi bi-envelope-fill"></i>
-        </a>
-        {% endif %}
         {% if site.scholar != "" %}
         <a href="{{ site.scholar }}" class="hero-link" target="_blank" aria-label="Google Scholar">
           <i class="bi bi-mortarboard-fill"></i>

@@ -43,7 +43,7 @@ permalink: /blog/
     <p class="empty-state-msg">
       The author is out collecting thoughts.<br>
       Good ideas take time —<br>
-      <span class="empty-state-sub">or so the author keeps saying.</span>
+      <span class="empty-state-sub">by me.</span>
     </p>
   </div>
 
