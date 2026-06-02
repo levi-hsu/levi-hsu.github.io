@@ -45,7 +45,24 @@ layout: default
     </div>
 
     <div class="hero-photo">
-      <img src="{{ site.photo | relative_url }}" alt="{{ site.title }}" class="profile-photo">
+      <picture>
+        <source
+          type="image/webp"
+          srcset="{{ '/assets/img/prof_pic-200.webp' | relative_url }} 200w,
+                  {{ '/assets/img/prof_pic-400.webp' | relative_url }} 400w"
+          sizes="(max-width: 680px) 150px, 200px">
+        <img
+          src="{{ '/assets/img/prof_pic-200.jpg' | relative_url }}"
+          srcset="{{ '/assets/img/prof_pic-200.jpg' | relative_url }} 200w,
+                  {{ '/assets/img/prof_pic-400.jpg' | relative_url }} 400w"
+          sizes="(max-width: 680px) 150px, 200px"
+          alt="{{ site.title }}"
+          class="profile-photo"
+          width="200"
+          height="200"
+          loading="eager"
+          decoding="async">
+      </picture>
       <div class="hero-contact">
         <p>{{ site.email }}</p>
         {% if page.office %}<p>{{ page.office }}</p>{% endif %}
