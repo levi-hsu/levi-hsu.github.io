@@ -4,7 +4,7 @@
     - "optimal transport"
   drive: "https://drive.google.com/file/d/1iBTLbO0jwdAVWTnsq_KRtLTwt7pXsfiy/view?usp=sharing"
   abstract: |
-    These notes study the curvature-dimension condition $\text{CD}(K,N)$ and its connection to $L^1$ optimal transport. After reviewing Kantorovich duality and Brenier's theorem, I derive $\text{CD}(K,N)$ for Riemannian manifolds via Ricci curvature — covering the Jacobian of the exponential map, Bochner's formula, and the $\Gamma_2$ calculus — as motivation for the metric measure space formulation. Examples include the one-dimensional and spherical cases. I also note that $\text{CD}(K,N)$ bounds for von Mises–Fisher distributions appear to be absent from the literature. The notes close with measure disintegration and transport sets in the $L^1$ setting, and an open problem.
+    These notes study the curvature-dimension condition $\text{CD}(K,N)$ and its connection to $L^1$ optimal transport. After reviewing Kantorovich duality and Brenier's theorem, I derive $\text{CD}(K,N)$ for Riemannian manifolds via Ricci curvature — covering the Jacobian of the exponential map, Bochner's formula, and the $\Gamma_2$ calculus — as motivation for the metric measure space formulation. Examples include the one-dimensional and spherical cases. I also note that $\text{CD}(K,N)$ bounds for von Mises–Fisher distributions appear to be absent from the literature. The notes close with measure disintegration and transport sets in the $L^1$ setting. This document is a huge effort but is not perfect either. Any correction is welcome.
   # updates:
   #   - date: "2026-06-15"
   #     note: "Added section on spherical examples."
