@@ -1051,6 +1051,40 @@ sup {
   margin-top: 1.6rem;
 }
 
+.language-switch {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: min(100%, 360px);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+  background: var(--bg);
+}
+
+.language-option {
+  appearance: none;
+  border: 0;
+  border-right: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text-muted);
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.9rem;
+  padding: 0.48rem 0.8rem;
+  transition: background 0.15s, color 0.15s;
+}
+.language-option:last-child {
+  border-right: 0;
+}
+.language-option:hover, .language-option.active {
+  background: var(--bg-alt);
+  color: var(--text);
+}
+.language-option.active {
+  font-weight: 600;
+}
+
 .office-hours-form {
   max-width: 680px;
   margin: 0 auto;
@@ -1154,6 +1188,11 @@ sup {
 .office-hours-form .submit-button {
   font-size: 0.84rem;
   padding: 0.55em 1.05em;
+}
+.office-hours-form .form-report-note {
+  color: var(--text-muted);
+  font-size: 0.82rem;
+  margin-top: 1.5rem;
 }
 
 @media (max-width: 680px) {

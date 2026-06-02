@@ -12,11 +12,11 @@ permalink: /office-hours/
 
   <div data-lang-panel="en">
     <p class="office-hours-intro">
-      I offer a small free learning help service for students who would like mathematical or academic guidance, especially students who do not have sufficient physical resources, local academic support, or people nearby who can help them.
+      I offer a small free learning help service for students who would like educational or academic help, especially students who do not have sufficient educational resources, local academic support, or people nearby who can help them.
     </p>
 
     <p class="office-hours-intro office-hours-intro-secondary">
-      The service is personal in scale: I read each request first, then decide whether I can respond usefully.
+      The service is personal in scale: I read each request, and then decide tell you whether I'm capable of your request.
     </p>
 
     <div class="office-hours-action office-hours-action-top">
@@ -26,10 +26,8 @@ permalink: /office-hours/
     <section class="office-hours-section">
       <h2>What I can help with</h2>
       <ul>
-        <li>Mathematical thinking: how to approach a problem and develop better habits of thought.</li>
+        <li>Tutoring: if you cannot afford local tutor fees, you can come to me (but please read the info below).</li>
         <li>Graduate school applications, especially for students applying abroad in mathematics or nearby areas.</li>
-        <li>Self-directed research: choosing papers, finding a direction, or starting an independent reading project.</li>
-        <li>Light research advising on an ongoing project or reading plan.</li>
         <li>Learning partner sessions, where you explain what you have learned and I ask questions or push back.</li>
       </ul>
     </section>
@@ -37,7 +35,6 @@ permalink: /office-hours/
     <section class="office-hours-section">
       <h2>What I cannot help with</h2>
       <ul>
-        <li>I do not solve homework or problem sets for you.</li>
         <li>I do not offer mathematics competition or olympiad preparation.</li>
         <li>I may decline undergraduate or graduate topics outside my current expertise.</li>
         <li>I cannot guarantee an online meeting before reviewing the question or materials.</li>
@@ -50,7 +47,7 @@ permalink: /office-hours/
         You can ask for either a written reply or an online meeting. After receiving your request, I will read the question, check whether it fits my background and capacity, and then reply by email. If a meeting seems useful, we will arrange the time manually.
       </p>
       <p class="office-hours-note">
-        I aim to confirm, decline, or ask for clarification within about five business days.
+        I aim to confirm, decline, or ask for clarification within about 2 days.
       </p>
     </section>
 
@@ -68,11 +65,11 @@ permalink: /office-hours/
 
   <div data-lang-panel="zh" hidden>
     <p class="office-hours-intro">
-      我提供一個小規模的免費學習協助服務，給希望獲得數學或學術方向建議的學生，尤其是身邊缺乏實體資源、在地學術支持，或缺少可以討論的人之學生。
+      為了幫助資源有限的同學，我提供完全免費的線上助學服務。如果您有現實上的困難使您無法得到及時的幫助，請填寫以下表格。
     </p>
 
     <p class="office-hours-intro office-hours-intro-secondary">
-      這是一個個人性質的服務：我會先閱讀每一份申請，再判斷我是否能提供有幫助的回應。
+      我會閱讀每一份申請，所以需要一些時間。不論你的要求是否成立，我都會回覆你。
     </p>
 
     <div class="office-hours-action office-hours-action-top">
@@ -82,31 +79,29 @@ permalink: /office-hours/
     <section class="office-hours-section">
       <h2>我可以協助的方向</h2>
       <ul>
-        <li>數學思考：如何接近一個問題，以及如何培養更好的思考習慣。</li>
-        <li>研究所申請，特別是數學或相關領域的海外申請。</li>
-        <li>自主研究：選擇論文、尋找方向，或開始獨立閱讀計畫。</li>
-        <li>對正在進行的研究或閱讀計畫提供輕量建議。</li>
-        <li>學習夥伴形式：你說明自己學到的內容，我聆聽、提問，並給予回饋。</li>
+        <li>家教：如果你無法負擔高額的家教費用，我可以幫你 (但請先閱讀以下資訊)。</li>
+        <li>申請學校，特別是海外學校申請。</li>
+        <li>學習夥伴形式：你說明自己學到的內容，我會聆聽、提問，並給予回饋。</li>
       </ul>
     </section>
 
     <section class="office-hours-section">
       <h2>我無法協助的內容</h2>
       <ul>
-        <li>我不會代寫或直接解完作業、問題集。</li>
-        <li>我不提供數學競賽或奧林匹亞訓練。</li>
-        <li>若大學或研究所程度的主題超出我的能力範圍，我可能會婉拒。</li>
-        <li>在閱讀問題或材料之前，我無法保證能安排線上會議。</li>
+        <li>無法提供作業代寫。</li>
+        <li>無法提供數學競賽或奧林匹亞相關解題服務。</li>
+        <li>超出我能力範圍的大學或以上程度的習題。</li>
+        <li>在閱讀您提供的問題或教材前，我無法保證能安排線上會議。</li>
       </ul>
     </section>
 
     <section class="office-hours-section">
-      <h2>申請如何被審閱</h2>
+      <h2>申請如何審閱</h2>
       <p>
         你可以選擇書面回覆或線上會議。我收到申請後，會先閱讀問題，確認是否符合我的背景與目前能負擔的時間，再以 email 回覆。如果線上會議比較合適，我們會再另外協調時間。
       </p>
       <p class="office-hours-note">
-        我預計在約五個工作天內確認、婉拒，或詢問進一步資訊。
+        我預計在約兩個工作天內確認、婉拒，或詢問進一步資訊。
       </p>
     </section>
 
@@ -118,7 +113,7 @@ permalink: /office-hours/
     </section>
 
     <p class="office-hours-note office-hours-closing">
-      如果你的情況符合這個服務的目的，歡迎送出申請。
+      如果你的情況符合上述要求，歡迎送出申請。
     </p>
   </div>
 </div>
