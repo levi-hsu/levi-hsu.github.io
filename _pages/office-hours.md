@@ -69,7 +69,7 @@ permalink: /free-help/
     </p>
 
     <p class="office-hours-intro office-hours-intro-secondary">
-      我會閱讀每一份申請，所以需要一些時間。不論你的要求是否成立，我都會回覆你。
+      我會閱讀每一份申請，所以需要一些時間。不論您的要求是否成立，我都會回覆您。
     </p>
 
     <div class="office-hours-action office-hours-action-top">
@@ -79,9 +79,9 @@ permalink: /free-help/
     <section class="office-hours-section">
       <h2>我可以協助的方向</h2>
       <ul>
-        <li>家教：如果你無法負擔高額的家教費用，我可以幫你 (但請先閱讀以下資訊)。</li>
+        <li>家教：如果你無法負擔高額的家教費用，我可以幫您 (但請先閱讀以下資訊)。</li>
         <li>申請學校經驗分享。</li>
-        <li>學習夥伴：請分享自己學到的內容，我會聆聽、提問，並給予回饋。</li>
+        <li>學習夥伴：您可以分享自己學到的內容，我會聆聽、提問，並給予回饋。</li>
       </ul>
     </section>
 
@@ -98,7 +98,7 @@ permalink: /free-help/
     <section class="office-hours-section">
       <h2>申請如何審閱</h2>
       <p>
-        你可以選擇書面回覆或線上會議。我收到申請後，會先閱讀問題，確認是否符合我的背景與目前能負擔的時間，再以 email 回覆。如果線上會議比較合適，我們會再另外協調時間。
+        您可以選擇書面回覆或線上會議。收到申請後，會先閱讀問題，確認是否符合我的能力與目前能負擔的時間，再以 email 回覆。如果線上會議比較合適，我們可以再另外協調時間。
       </p>
       <p class="office-hours-note">
         預計於約兩天內確認、婉拒，或詢問進一步資訊。
@@ -108,12 +108,12 @@ permalink: /free-help/
     <section class="office-hours-section">
       <h2>填寫前請先準備</h2>
       <p>
-        請清楚描述你的情況，並附上相關材料，例如作業、筆記、論文、Overleaf 專案、GitHub repository，或共享雲端資料夾。具體的問題比籠統的請求更容易得到有用回應哦～
+        請清楚描述您的情況，並附上相關材料，例如作業、筆記、論文、Overleaf 專案、GitHub repository，或共享雲端資料夾。具體的問題比籠統的請求更容易得到有用回應哦～
       </p>
     </section>
 
     <p class="office-hours-note office-hours-closing">
-      如果你的情況符合上述要求，歡迎提交表格。
+      如果您的情況符合上述要求，歡迎提交表格。
     </p>
   </div>
 </div>
