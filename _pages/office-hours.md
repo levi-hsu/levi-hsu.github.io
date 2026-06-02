@@ -73,7 +73,7 @@ permalink: /free-help/
     </p>
 
     <div class="office-hours-action office-hours-action-top">
-      <a class="btn-link office-hours-apply-link" href="{{ '/free-help/apply/?lang=zh' | relative_url }}">填寫申請表</a>
+      <a class="btn-link office-hours-apply-link" href="{{ '/free-help/apply/?lang=zh' | relative_url }}">填寫表單</a>
     </div>
 
     <section class="office-hours-section">
