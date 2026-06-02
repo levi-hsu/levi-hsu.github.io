@@ -1,0 +1,129 @@
+---
+layout: page
+title: request learning help
+permalink: /office-hours/apply/
+---
+
+<div class="office-hours-form">
+  <p class="form-intro">
+    Use this form to send the information I need before deciding whether a written reply or an online meeting would be useful. The form is intentionally plain; the question itself matters most.
+  </p>
+
+  <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" enctype="multipart/form-data">
+    <div class="form-section">
+      <h2>Contact</h2>
+      <p>I will use this only to reply to your request.</p>
+    </div>
+
+    <div class="form-field">
+      <label for="name">Name</label>
+      <input id="name" name="name" type="text" autocomplete="name" required>
+    </div>
+
+    <div class="form-field">
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" autocomplete="email" required>
+    </div>
+
+    <div class="form-field">
+      <label for="preferred-language">Preferred language</label>
+      <select id="preferred-language" name="preferred_language" required>
+        <option value="">Select one</option>
+        <option value="English">English</option>
+        <option value="Traditional Chinese">Traditional Chinese</option>
+      </select>
+    </div>
+
+    <div class="form-section">
+      <h2>Request</h2>
+      <p>These details help me understand the kind of help you are asking for.</p>
+    </div>
+
+    <fieldset class="form-field">
+      <legend>Preferred help format</legend>
+      <div class="choice-group">
+        <label class="choice"><input type="radio" name="help_format" value="Written reply" required> Written reply</label>
+        <label class="choice"><input type="radio" name="help_format" value="Online meeting"> Online meeting</label>
+        <label class="choice"><input type="radio" name="help_format" value="Either"> Either</label>
+      </div>
+    </fieldset>
+
+    <div class="form-field">
+      <label for="service-type">Service type</label>
+      <select id="service-type" name="service_type" required>
+        <option value="">Select one</option>
+        <option value="Mathematical thinking">Mathematical thinking</option>
+        <option value="Graduate school applications">Graduate school applications</option>
+        <option value="Self-directed research">Self-directed research</option>
+        <option value="Research advising">Research advising</option>
+        <option value="Learning partner">Learning partner</option>
+      </select>
+    </div>
+
+    <div class="form-field">
+      <label for="academic-level">Academic level</label>
+      <select id="academic-level" name="academic_level" required>
+        <option value="">Select one</option>
+        <option value="Secondary">Secondary</option>
+        <option value="Undergraduate">Undergraduate</option>
+        <option value="Graduate">Graduate</option>
+        <option value="Other">Other</option>
+      </select>
+    </div>
+
+    <div class="form-field">
+      <label for="region">Nationality or region</label>
+      <input id="region" name="nationality_or_region" type="text" autocomplete="country-name" required>
+    </div>
+
+    <div class="form-field">
+      <label for="institution">Institution <span class="field-note">(optional)</span></label>
+      <input id="institution" name="institution" type="text" autocomplete="organization">
+    </div>
+
+    <div class="form-field">
+      <label for="subject-area">Subject area</label>
+      <input id="subject-area" name="subject_area" type="text" placeholder="For example: probability, real analysis, graduate applications" required>
+    </div>
+
+    <div class="form-field">
+      <label for="question">Question or situation</label>
+      <textarea id="question" name="question_or_situation" required></textarea>
+    </div>
+
+    <div class="form-field">
+      <label for="materials-link">Link to problem set / notes / file</label>
+      <input id="materials-link" name="materials_link" type="url" placeholder="https://">
+      <p class="field-note">Google Drive, Dropbox, GitHub, Overleaf, a PDF link, or another shared file link is fine.</p>
+    </div>
+
+    <div class="form-field">
+      <label for="problem-photos">Photos of problem set or notes</label>
+      <input id="problem-photos" name="problem_photos[]" type="file" accept="image/jpeg,image/png" multiple>
+      <p class="field-note">Optional. Upload up to 5 photos. JPG and PNG only.</p>
+    </div>
+
+    <div class="form-field">
+      <label for="availability">Timezone and rough availability</label>
+      <textarea id="availability" name="timezone_and_availability" placeholder="Only needed if an online meeting may be useful."></textarea>
+    </div>
+
+    <div class="form-actions">
+      <button class="btn-link submit-button" type="submit">Submit request</button>
+    </div>
+  </form>
+</div>
+
+<script>
+  (function () {
+    var photoInput = document.getElementById('problem-photos');
+    if (!photoInput) return;
+
+    photoInput.addEventListener('change', function () {
+      if (photoInput.files.length > 5) {
+        photoInput.value = '';
+        window.alert('Please upload at most 5 photos.');
+      }
+    });
+  })();
+</script>

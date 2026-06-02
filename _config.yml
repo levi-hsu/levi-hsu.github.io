@@ -71,3 +71,5 @@ nav:
     url: /blog/
   - name: notes
     url: /notes/
+  - name: office hours
+    url: /office-hours/
