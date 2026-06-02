@@ -696,6 +696,49 @@ sup {
   margin-bottom: 0.6rem;
 }
 
+/* ── Update log ── */
+.update-log {
+  margin-top: 0.75rem;
+  padding: 0.6rem 0.9rem;
+  border-left: 2px solid var(--accent);
+  background: var(--bg-alt);
+  border-radius: 0 5px 5px 0;
+  font-size: 0.83rem;
+}
+
+.update-log-label {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--accent);
+  margin-bottom: 0.35rem;
+}
+
+.update-log-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  color: var(--text-muted);
+}
+.update-log-list li {
+  display: flex;
+  gap: 0.6rem;
+  align-items: baseline;
+}
+
+.update-log-date {
+  white-space: nowrap;
+  font-weight: 600;
+  color: var(--text-muted);
+  font-size: 0.78rem;
+  flex-shrink: 0;
+}
+
 /* ── Responsive ── */
 @media (max-width: 640px) {
   .pub-entry {

@@ -46,6 +46,18 @@ permalink: /notes/
           {{ note.abstract | markdownify }}
         </div>
         {% endif %}
+
+        <!-- Update log -->
+        {% if note.updates and note.updates.size > 0 %}
+        <div class="update-log">
+          <span class="update-log-label">Updates</span>
+          <ul class="update-log-list">
+            {% for u in note.updates %}
+            <li><span class="update-log-date">{{ u.date | date: "%b %-d, %Y" }}</span> {{ u.note }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+        {% endif %}
       </div>
 
     </div>
