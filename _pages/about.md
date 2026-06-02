@@ -9,4 +9,4 @@ permalink: /
 I obtained my Bachelor degree (Math) from National Taiwan University with a minor in Foreign Languages and Literatures. 
 - optimal transport, stochastic analysis
 - mathematics of reinforcement learning
-- generative modeling (e.g. McKean-Vlasov SDEs)
+- generative modeling
