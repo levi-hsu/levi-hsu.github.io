@@ -10,17 +10,17 @@ permalink: /office-hours/apply/
     <button class="language-option" type="button" data-lang-switch="zh">繁體中文</button>
   </div>
 
-  <div data-lang-panel="en">
+  <!-- <div data-lang-panel="en">
     <p class="form-intro">
       Use this form to send the information I need before deciding whether a written reply or an online meeting would be useful. The form is intentionally plain; the question itself matters most.
     </p>
-  </div>
+  </div> -->
 
-  <div data-lang-panel="zh" hidden>
+  <!-- <div data-lang-panel="zh" hidden>
     <p class="form-intro">
       請填寫提供我判斷的資訊。表單刻意保持簡單，最重要的是問題本身。
     </p>
-  </div>
+  </div> -->
 
   <form action="https://formspree.io/f/mwvzgalp" method="POST" enctype="multipart/form-data">
     <input type="hidden" name="subject" value="New free learning help request">
@@ -115,9 +115,15 @@ permalink: /office-hours/apply/
     </div>
 
     <div class="form-field">
-      <label for="problem-photos"><span data-lang-panel="en">Photos of problem set or notes</span><span data-lang-panel="zh" hidden>問題集或筆記照片</span></label>
-      <input id="problem-photos" name="problem_photos[]" type="file" accept="image/jpeg,image/png" multiple>
-      <p class="field-note"><span data-lang-panel="en">Optional. Upload up to 5 photos. JPG and PNG only.</span><span data-lang-panel="zh" hidden>選填。最多上傳 5 張照片，僅限 JPG 與 PNG。</span></p>
+      <label><span data-lang-panel="en">Problem set, notes, or related files</span><span data-lang-panel="zh" hidden>問題集、筆記或相關檔案</span></label>
+      <div class="file-stack">
+        <input id="material-file-1" name="material_file_1" type="file" accept=".jpg,.jpeg,.png,.pdf,image/jpeg,image/png,application/pdf">
+        <input id="material-file-2" name="material_file_2" type="file" accept=".jpg,.jpeg,.png,.pdf,image/jpeg,image/png,application/pdf">
+        <input id="material-file-3" name="material_file_3" type="file" accept=".jpg,.jpeg,.png,.pdf,image/jpeg,image/png,application/pdf">
+        <input id="material-file-4" name="material_file_4" type="file" accept=".jpg,.jpeg,.png,.pdf,image/jpeg,image/png,application/pdf">
+        <input id="material-file-5" name="material_file_5" type="file" accept=".jpg,.jpeg,.png,.pdf,image/jpeg,image/png,application/pdf">
+      </div>
+      <p class="field-note"><span data-lang-panel="en">Optional. Upload up to 5 files. JPG, PNG, and PDF only.</span><span data-lang-panel="zh" hidden>選填。最多上傳 5 個檔案，僅限 JPG、PNG 與 PDF。</span></p>
     </div>
 
     <div class="form-field">
@@ -136,18 +142,6 @@ permalink: /office-hours/apply/
 </div>
 
 <script>
-  (function () {
-    var photoInput = document.getElementById('problem-photos');
-    if (!photoInput) return;
-
-    photoInput.addEventListener('change', function () {
-      if (photoInput.files.length > 5) {
-        photoInput.value = '';
-        window.alert('Please upload at most 5 photos.');
-      }
-    });
-  })();
-
   (function () {
     var buttons = document.querySelectorAll('[data-lang-switch]');
     var panels = document.querySelectorAll('[data-lang-panel]');
