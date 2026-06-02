@@ -42,14 +42,14 @@ permalink: /free-help/apply/
       <input id="email" name="email" type="email" autocomplete="email" required>
     </div>
 
-    <div class="form-field">
+    <!-- <div class="form-field">
       <label for="preferred-language"><span data-lang-panel="en">Preferred language</span><span data-lang-panel="zh" hidden>偏好的溝通語言</span></label>
       <select id="preferred-language" name="preferred_language" required>
         <option value="">Select one</option>
         <option value="English">English</option>
         <option value="Traditional Chinese">Traditional Chinese</option>
       </select>
-    </div>
+    </div> -->
 
     <div class="form-section">
       <h2><span data-lang-panel="en">Request</span><span data-lang-panel="zh" hidden>申請內容</span></h2>
@@ -57,11 +57,10 @@ permalink: /free-help/apply/
     </div>
 
     <fieldset class="form-field">
-      <legend><span data-lang-panel="en">Preferred help format</span><span data-lang-panel="zh" hidden>偏好的協助形式</span></legend>
+      <legend><span data-lang-panel="en">Preferred help format</span><span data-lang-panel="zh" hidden>如何幫助你？</span></legend>
       <div class="choice-group">
-        <label class="choice"><input type="radio" name="help_format" value="Written reply" required> Written reply</label>
-        <label class="choice"><input type="radio" name="help_format" value="Online meeting"> Online meeting</label>
-        <label class="choice"><input type="radio" name="help_format" value="Either"> Either</label>
+        <label class="choice"><input type="radio" name="help_format" value="Written reply" required> <span data-lang-panel="en">Written reply</span><span data-lang-panel="zh" hidden>文字回覆</span></label>
+        <label class="choice"><input type="radio" name="help_format" value="Online meeting"> <span data-lang-panel="en">Online meeting</span><span data-lang-panel="zh" hidden>線上回覆</span></label>
       </div>
     </fieldset>
 
