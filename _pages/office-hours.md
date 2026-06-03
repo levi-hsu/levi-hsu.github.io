@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Free help
+description: "Free educational and academic help for students with limited local resources, including tutoring, graduate school application sharing, and learning partner sessions."
 permalink: /free-help/
 ---
 
@@ -12,7 +13,7 @@ permalink: /free-help/
 
   <div data-lang-panel="en">
     <p class="office-hours-intro">
-      I offer a small, totally free learning help service for students who would like educational or academic help, especially students who do not have sufficient educational resources, local academic support, or people nearby who can help them.
+      I offer a small, totally free learning help service for students with limited educational resources, local academic support, or people nearby who can help them.
     </p>
 
     <p class="office-hours-intro office-hours-intro-secondary">
@@ -65,7 +66,7 @@ permalink: /free-help/
 
   <div data-lang-panel="zh" hidden>
     <p class="office-hours-intro">
-      為了幫助資源有限的同學，我提供完全免費的線上助學服務。如果您有現實上的困難使您無法得到及時的幫助，請填寫以下表格。
+      為了幫助資源有限的同學，我想提供完全免費的線上助學服務。如果您有現實上的困難使您無法得到及時的幫助，請填寫以下表格。
     </p>
 
     <p class="office-hours-intro office-hours-intro-secondary">
