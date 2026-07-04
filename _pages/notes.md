@@ -1,10 +1,10 @@
 ---
 layout: default
-title: notes
+title: math project
 permalink: /notes/
 ---
 <div class="notes-page">
-  <h1 class="page-title">notes</h1>
+  <h1 class="page-title">math project</h1>
 
   <div class="pub-list">
     {% for note in site.data.notes %}
