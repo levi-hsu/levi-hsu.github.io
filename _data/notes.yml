@@ -1,3 +1,11 @@
+- title: "Solutions to Brownian Motion, Martingales, and Stochastic Calculus (sample version)"
+  date: "2026-07-04"
+  tags: 
+    - "stochastic calculus"
+  drive: "https://drive.google.com/file/d/13kJQX8Nbu3XNwgspSNtqbbK_k52PjqzY/view?usp=share_link"
+  abstract: |
+    Full version is upcoming. The document is **NOT DOWNLOADABLE**.
+
 - title: "A Note on Curvature-Dimension Conditions and $L^1$ Optimal Transport"
   date: "2026-06-02"
   tags:
@@ -8,11 +16,3 @@
   # updates:
   #   - date: "2026-06-15"
   #     note: "test"
-
-- title: "Solutions to Brownian Motion, Martingales, and Stochastic Calculus (sample version)"
-  date: "2026-07-04"
-  tags: 
-    - "stochastic calculus"
-  drive: "https://drive.google.com/file/d/13kJQX8Nbu3XNwgspSNtqbbK_k52PjqzY/view?usp=share_link"
-  abstract: |
-    There are two purposes of this document: to help readers who have already spent time thinking about the exercises but have been stuck for a while, and to provide solutions that are more natural, straightforward, and readable than the existing ones. The PDF is **NOT DOWNLOADABLE**. I hope this small inconvenience can encourage readers to think more actively rather than relying on the solutions too quickly. Due to personal reasons, I did not work on the exercises in Chapter 9, but all the remaining exercises are included.
