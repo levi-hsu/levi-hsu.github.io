@@ -42,6 +42,16 @@ permalink: /publications/
           <em>{{ pub.venue }}</em>
         </p>
 
+        {% if pub.downloadable == true or pub.downloadable == false %}
+        <div class="availability-tags">
+          {% if pub.downloadable %}
+          <span class="tag availability-tag availability-tag-downloadable">PDF</span>
+          {% else %}
+          <span class="tag availability-tag availability-tag-unavailable">No PDF</span>
+          {% endif %}
+        </div>
+        {% endif %}
+
         <!-- Action buttons -->
         <div class="pub-links">
           {% if pub.bibtex and pub.bibtex != "" %}

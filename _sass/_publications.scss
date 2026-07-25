@@ -100,6 +100,20 @@
   margin-bottom: 0.6rem;
 }
 
+.availability-tags {
+  margin-bottom: 0.6rem;
+}
+
+.availability-tag {
+  font-weight: 600;
+}
+
+.availability-tag-unavailable {
+  background: var(--bg-alt);
+  color: var(--text-muted);
+  border: 1px solid var(--border);
+}
+
 /* ── Update log ── */
 .update-log {
   margin-top: 0.75rem;
