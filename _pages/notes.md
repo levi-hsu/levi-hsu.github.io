@@ -51,7 +51,7 @@ permalink: /notes/
         <!-- Abstract -->
         {% if note.abstract and note.abstract != "" %}
         <div class="pub-abstract">
-          {{ note.abstract | markdownify }}
+          <p>{{ note.abstract | strip | newline_to_br }}</p>
         </div>
         {% endif %}
 

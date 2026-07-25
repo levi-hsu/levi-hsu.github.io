@@ -74,7 +74,7 @@ permalink: /publications/
         <!-- Abstract -->
         {% if pub.abstract and pub.abstract != "" %}
         <div class="pub-abstract">
-          {{ pub.abstract | markdownify }}
+          <p>{{ pub.abstract | strip | newline_to_br }}</p>
         </div>
         {% endif %}
 
