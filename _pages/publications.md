@@ -69,11 +69,11 @@ permalink: /publications/
               <blockquote>{{ pub.citation }}</blockquote>
               {% endif %}
               {% if pub.bibtex %}
-              <div class="citation-card-header">
-                <span class="citation-card-label">BibTeX</span>
-                <button class="citation-copy" type="button" data-copy="{{ pub.bibtex | escape }}">Copy</button>
+              <span class="citation-card-label">BibTeX</span>
+              <div class="citation-code">
+                <button class="citation-copy citation-copy-corner" type="button" data-copy="{{ pub.bibtex | escape }}">copy</button>
+                <pre>{{ pub.bibtex | escape }}</pre>
               </div>
-              <pre>{{ pub.bibtex | escape }}</pre>
               {% endif %}
             </div>
           </div>

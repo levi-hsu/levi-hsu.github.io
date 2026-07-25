@@ -58,11 +58,11 @@ permalink: /notes/
               <blockquote>{{ note.citation }}</blockquote>
               {% endif %}
               {% if note.bibtex %}
-              <div class="citation-card-header">
-                <span class="citation-card-label">BibTeX</span>
-                <button class="citation-copy" type="button" data-copy="{{ note.bibtex | escape }}">Copy</button>
+              <span class="citation-card-label">BibTeX</span>
+              <div class="citation-code">
+                <button class="citation-copy citation-copy-corner" type="button" data-copy="{{ note.bibtex | escape }}">copy</button>
+                <pre>{{ note.bibtex | escape }}</pre>
               </div>
-              <pre>{{ note.bibtex | escape }}</pre>
               {% endif %}
             </div>
           </div>

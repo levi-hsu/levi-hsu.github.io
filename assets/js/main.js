@@ -151,7 +151,7 @@
 
       const original = btn.textContent;
       copyText(btn.dataset.copy || '').then(function () {
-        btn.textContent = 'Copied';
+        btn.textContent = 'copied!';
         btn.classList.add('copied');
         setTimeout(function () {
           btn.textContent = original;
