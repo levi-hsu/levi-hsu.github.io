@@ -48,7 +48,7 @@ permalink: /notes/
           {% endif %}
           {% if note.citation or note.bibtex %}
           <div class="citation-hover">
-            <button class="btn-link citation-trigger" type="button">Cite</button>
+            <button class="btn-link citation-trigger" type="button">BIB</button>
             <div class="citation-card" role="tooltip">
               {% if note.citation %}
               <div class="citation-card-header">

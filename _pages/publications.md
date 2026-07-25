@@ -54,12 +54,9 @@ permalink: /publications/
 
         <!-- Action buttons -->
         <div class="pub-links">
-          {% if pub.bibtex and pub.bibtex != "" %}
-          <button class="btn-link bib-trigger" data-bib="{{ pub.bibtex | escape }}">BIB</button>
-          {% endif %}
           {% if pub.citation or pub.bibtex %}
           <div class="citation-hover">
-            <button class="btn-link citation-trigger" type="button">Cite</button>
+            <button class="btn-link citation-trigger" type="button">BIB</button>
             <div class="citation-card" role="tooltip">
               {% if pub.citation %}
               <div class="citation-card-header">
