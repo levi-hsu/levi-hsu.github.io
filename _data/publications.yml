@@ -17,12 +17,12 @@
     - name: "Le-Rong Hsu"
       first_author: true
       url: ""
-  # venue: "Manuscript"
+  venue: "Manuscript"
   arxiv: ""
   pdf: "https://drive.google.com/file/d/1GdwkdBOQIkArQN41pMq9wReEbSXNzupZ/view?usp=share_link"
   code: ""
   downloadable: true
-  citation: 'Hsu, Le-Rong. "Flow Matching with von Mises-Fisher Posteriors: An Irreducibility Theorem." Manuscript (2026). https://drive.google.com/file/d/1GdwkdBOQIkArQN41pMq9wReEbSXNzupZ/view?usp=share_link'
+  citation: 'Hsu, Le-Rong. "Flow Matching with von Mises-Fisher Posteriors: An Irreducibility Theorem." Manuscript (2026).'
   bibtex: |
     @misc{hsu2026flowmatchingvmf,
       title = {Flow Matching with von Mises-Fisher Posteriors: An Irreducibility Theorem},
