@@ -45,9 +45,9 @@ permalink: /publications/
         {% if pub.downloadable == true or pub.downloadable == false %}
         <div class="availability-tags">
           {% if pub.downloadable %}
-          <span class="tag availability-tag availability-tag-downloadable">PDF</span>
+          <span class="tag availability-tag availability-tag-downloadable">Downloadable</span>
           {% else %}
-          <span class="tag availability-tag availability-tag-unavailable">No PDF</span>
+          <span class="tag availability-tag availability-tag-unavailable">Not Downloadable</span>
           {% endif %}
         </div>
         {% endif %}

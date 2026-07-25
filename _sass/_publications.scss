@@ -105,13 +105,34 @@
 }
 
 .availability-tag {
+  border: 1px solid transparent;
   font-weight: 600;
 }
 
+.availability-tag-downloadable {
+  background: #e8f5e9;
+  color: #2e7d32;
+  border-color: #a5d6a7;
+}
+
 .availability-tag-unavailable {
-  background: var(--bg-alt);
-  color: var(--text-muted);
-  border: 1px solid var(--border);
+  background: #ffebee;
+  color: #c62828;
+  border-color: #ef9a9a;
+}
+
+[data-theme="dark"] {
+  .availability-tag-downloadable {
+    background: #14351d;
+    color: #81c784;
+    border-color: #2e7d32;
+  }
+
+  .availability-tag-unavailable {
+    background: #3d1719;
+    color: #ef9a9a;
+    border-color: #c62828;
+  }
 }
 
 /* ── Update log ── */

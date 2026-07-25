@@ -31,9 +31,9 @@ permalink: /notes/
           {% for tag in note.tags %}<span class="tag">{{ tag }}</span>{% endfor %}
           {% if note.downloadable == true or note.downloadable == false %}
             {% if note.downloadable %}
-            <span class="tag availability-tag availability-tag-downloadable">PDF</span>
+            <span class="tag availability-tag availability-tag-downloadable">Downloadable</span>
             {% else %}
-            <span class="tag availability-tag availability-tag-unavailable">No PDF</span>
+            <span class="tag availability-tag availability-tag-unavailable">Not Downloadable</span>
             {% endif %}
           {% endif %}
         </div>
