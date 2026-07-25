@@ -46,24 +46,15 @@ permalink: /notes/
             <i class="bi bi-google" style="font-size:0.75em; margin-right:2px;"></i>Drive
           </a>
           {% endif %}
-          {% if note.citation or note.bibtex %}
+          {% if note.bibtex %}
           <div class="citation-hover">
             <button class="btn-link citation-trigger" type="button">BIB</button>
             <div class="citation-card" role="tooltip">
-              {% if note.citation %}
-              <div class="citation-card-header">
-                <span class="citation-card-label">Please cite this work as:</span>
-                <button class="citation-copy" type="button" data-copy="{{ note.citation | escape }}">Copy</button>
-              </div>
-              <blockquote>{{ note.citation }}</blockquote>
-              {% endif %}
-              {% if note.bibtex %}
               <span class="citation-card-label">BibTeX</span>
               <div class="citation-code">
                 <button class="citation-copy citation-copy-corner" type="button" data-copy="{{ note.bibtex | escape }}">copy</button>
                 <pre>{{ note.bibtex | escape }}</pre>
               </div>
-              {% endif %}
             </div>
           </div>
           {% endif %}
