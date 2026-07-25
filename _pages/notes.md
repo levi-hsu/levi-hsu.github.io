@@ -51,11 +51,17 @@ permalink: /notes/
             <button class="btn-link citation-trigger" type="button">Cite</button>
             <div class="citation-card" role="tooltip">
               {% if note.citation %}
-              <span class="citation-card-label">Please cite this work as:</span>
+              <div class="citation-card-header">
+                <span class="citation-card-label">Please cite this work as:</span>
+                <button class="citation-copy" type="button" data-copy="{{ note.citation | escape }}">Copy</button>
+              </div>
               <blockquote>{{ note.citation }}</blockquote>
               {% endif %}
               {% if note.bibtex %}
-              <span class="citation-card-label">BibTeX</span>
+              <div class="citation-card-header">
+                <span class="citation-card-label">BibTeX</span>
+                <button class="citation-copy" type="button" data-copy="{{ note.bibtex | escape }}">Copy</button>
+              </div>
               <pre>{{ note.bibtex | escape }}</pre>
               {% endif %}
             </div>

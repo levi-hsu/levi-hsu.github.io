@@ -125,6 +125,43 @@
   });
 })();
 
+/* ── Floating Citation Copy ── */
+(function () {
+  function copyText(text) {
+    if (navigator.clipboard) {
+      return navigator.clipboard.writeText(text);
+    }
+
+    const textarea = document.createElement('textarea');
+    textarea.value = text;
+    textarea.setAttribute('readonly', '');
+    textarea.style.position = 'fixed';
+    textarea.style.opacity = '0';
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand('copy');
+    document.body.removeChild(textarea);
+    return Promise.resolve();
+  }
+
+  document.querySelectorAll('.citation-copy').forEach(function (btn) {
+    btn.addEventListener('click', function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+
+      const original = btn.textContent;
+      copyText(btn.dataset.copy || '').then(function () {
+        btn.textContent = 'Copied';
+        btn.classList.add('copied');
+        setTimeout(function () {
+          btn.textContent = original;
+          btn.classList.remove('copied');
+        }, 1400);
+      });
+    });
+  });
+})();
+
 /* ── Table of Contents (blog posts) ── */
 (function () {
   const nav = document.getElementById('toc-nav');

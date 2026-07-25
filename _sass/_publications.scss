@@ -181,6 +181,40 @@
   font-weight: 600;
 }
 
+.citation-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.citation-copy {
+  flex-shrink: 0;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 0.12rem 0.45rem;
+  background: var(--bg-alt);
+  color: var(--text-muted);
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 0.7rem;
+  font-weight: 600;
+  line-height: 1.5;
+  transition: color 0.15s, border-color 0.15s, background 0.15s;
+
+  &:hover,
+  &:focus {
+    background: var(--btn-hover-bg);
+    border-color: var(--btn-hover-bg);
+    color: var(--btn-hover-text);
+  }
+
+  &.copied {
+    border-color: #4caf50;
+    color: #2e7d32;
+  }
+}
+
 .citation-hover:hover .citation-card,
 .citation-hover:focus-within .citation-card {
   opacity: 1;

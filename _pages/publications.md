@@ -62,11 +62,17 @@ permalink: /publications/
             <button class="btn-link citation-trigger" type="button">Cite</button>
             <div class="citation-card" role="tooltip">
               {% if pub.citation %}
-              <span class="citation-card-label">Please cite this work as:</span>
+              <div class="citation-card-header">
+                <span class="citation-card-label">Please cite this work as:</span>
+                <button class="citation-copy" type="button" data-copy="{{ pub.citation | escape }}">Copy</button>
+              </div>
               <blockquote>{{ pub.citation }}</blockquote>
               {% endif %}
               {% if pub.bibtex %}
-              <span class="citation-card-label">BibTeX</span>
+              <div class="citation-card-header">
+                <span class="citation-card-label">BibTeX</span>
+                <button class="citation-copy" type="button" data-copy="{{ pub.bibtex | escape }}">Copy</button>
+              </div>
               <pre>{{ pub.bibtex | escape }}</pre>
               {% endif %}
             </div>
