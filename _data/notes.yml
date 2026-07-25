@@ -4,6 +4,16 @@
     - "stochastic calculus"
   drive: "https://drive.google.com/file/d/13kJQX8Nbu3XNwgspSNtqbbK_k52PjqzY/view?usp=share_link"
   downloadable: false
+  citation: 'Hsu, Le-Rong. "Solutions to Brownian Motion, Martingales, and Stochastic Calculus (sample version)." Math project (July 2026). https://drive.google.com/file/d/13kJQX8Nbu3XNwgspSNtqbbK_k52PjqzY/view?usp=share_link'
+  bibtex: |
+    @misc{hsu2026brownian,
+      title = {Solutions to Brownian Motion, Martingales, and Stochastic Calculus (sample version)},
+      author = {Hsu, Le-Rong},
+      year = {2026},
+      month = {July},
+      note = {Math project},
+      url = {https://drive.google.com/file/d/13kJQX8Nbu3XNwgspSNtqbbK_k52PjqzY/view?usp=share_link}
+    }
   abstract: |
     Full version is upcoming.
 
@@ -13,6 +23,16 @@
     - "optimal transport"
   drive: "https://drive.google.com/file/d/1iBTLbO0jwdAVWTnsq_KRtLTwt7pXsfiy/view?usp=sharing"
   downloadable: false
+  citation: 'Hsu, Le-Rong. "A Note on Curvature-Dimension Conditions and L1 Optimal Transport." Math project (June 2026). https://drive.google.com/file/d/1iBTLbO0jwdAVWTnsq_KRtLTwt7pXsfiy/view?usp=sharing'
+  bibtex: |
+    @misc{hsu2026curvaturedimension,
+      title = {A Note on Curvature-Dimension Conditions and L1 Optimal Transport},
+      author = {Hsu, Le-Rong},
+      year = {2026},
+      month = {June},
+      note = {Math project},
+      url = {https://drive.google.com/file/d/1iBTLbO0jwdAVWTnsq_KRtLTwt7pXsfiy/view?usp=sharing}
+    }
   abstract: |
     These notes study the curvature-dimension condition \(\text{CD}(K,N)\) and its connection to \(L^1\) optimal transport. After reviewing Kantorovich duality and Brenier's theorem, I derive \(\text{CD}(K,N)\) for Riemannian manifolds via Ricci curvature — covering the Jacobian of the exponential map, Bochner's formula, and the \(\Gamma_2\) calculus — as motivation for the metric measure space formulation. Examples include the one-dimensional and spherical cases. I also note that \(\text{CD}(K,N)\) bounds for von Mises-Fisher distributions appear to be absent from the literature. The notes close with measure disintegration and transport sets in the \(L^1\) setting. This document is a huge effort but is not perfect either. Any correction is welcome.
   # updates:

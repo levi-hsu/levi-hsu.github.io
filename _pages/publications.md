@@ -57,6 +57,21 @@ permalink: /publications/
           {% if pub.bibtex and pub.bibtex != "" %}
           <button class="btn-link bib-trigger" data-bib="{{ pub.bibtex | escape }}">BIB</button>
           {% endif %}
+          {% if pub.citation or pub.bibtex %}
+          <div class="citation-hover">
+            <button class="btn-link citation-trigger" type="button">Cite</button>
+            <div class="citation-card" role="tooltip">
+              {% if pub.citation %}
+              <span class="citation-card-label">Please cite this work as:</span>
+              <blockquote>{{ pub.citation }}</blockquote>
+              {% endif %}
+              {% if pub.bibtex %}
+              <span class="citation-card-label">BibTeX</span>
+              <pre>{{ pub.bibtex | escape }}</pre>
+              {% endif %}
+            </div>
+          </div>
+          {% endif %}
           {% if pub.arxiv and pub.arxiv != "" %}
           <a class="btn-link" href="{{ pub.arxiv }}" target="_blank">arXiv</a>
           {% endif %}
