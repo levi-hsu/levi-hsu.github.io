@@ -12,7 +12,7 @@
 #     @inproceedings{...}
 #   abstract: ""
 #   image: ""
-- title: "Flow Matching with Mixture von Mises--Fisher Posteriors: An Irreducibility Theorem"
+- title: "Flow Matching with Mixture von Mises-Fisher Posteriors: An Irreducibility Theorem"
   authors:
     - name: "Le-Rong Hsu"
       first_author: false
@@ -24,19 +24,19 @@
   downloadable: true
   bibtex: ""
   abstract: |
-    We study flow matching on the Fisher--Rao simplex $\Delta^{d-1}$, realized isometrically
-    as the positive orthant $\mathcal{S}^{d-1}_+$ of the round sphere via $x_i\mapsto\sqrt{x_i}$. A
-    posterior over completions $p_t(x_1\mid x_t)$ modeled by a single von Mises--Fisher
+    We study flow matching on the Fisher--Rao simplex \(\Delta^{d-1}\), realized isometrically
+    as the positive orthant \(\mathcal{S}^{d-1}\_+\) of the round sphere via \(x\_i\mapsto\sqrt{x\_i}\). A
+    posterior over completions \(p\_t(x\_1\mid x\_t)\) modeled by a single von Mises--Fisher
     (vMF) law is unimodal by construction, so it cannot represent a genuinely multimodal
     posterior: under the flow-matching loss it is driven toward a single mean direction that
     need not track any true mode. We give two exact, non-asymptotic results. First, for a
     single vMF component, we compute the posterior-averaged log map in closed form up to an
-    explicit $O(1/\kappa^2)$ remainder, replacing an earlier probabilistic concentration
-    argument and recovering its $\kappa\to\infty$ limit as the special case $K=1$. Second,
-    for a $K\ge2$-component mixture-vMF posterior, we prove that its marginal velocity field
-    cannot equal any single-target field $\log_{(\cdot)}(\mu^\star)$ on $\mathcal{S}^{d-1}_+$: exactly,
-    with no error terms, in the limit $\kappa_k\to\infty$. Multimodality is therefore a
+    explicit \(O(1/\kappa^2)\) remainder, replacing an earlier probabilistic concentration
+    argument and recovering its \(\kappa\to\infty\) limit as the special case \(K=1\). Second,
+    for a \(K\ge2\)-component mixture-vMF posterior, we prove that its marginal velocity field
+    cannot equal any single-target field \(\log\_{(\cdot)}(\mu^\star)\) on \(\mathcal{S}^{d-1}\_+\): exactly,
+    with no error terms, in the limit \(\kappa\_k\to\infty\). Multimodality is therefore a
     structural obstruction that no single-target field can remove. We do not address here
-    the Fisher--Rao boundary-explosion problem near $\partial\mathcal{S}^{d-1}_+$ or the relationship to
-    the $\alpha$-Flow family.
+    the Fisher--Rao boundary-explosion problem near \(\partial\mathcal{S}^{d-1}\_+\) or the relationship to
+    the \(\alpha\)-Flow family.
   image: ""
