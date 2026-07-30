@@ -65,11 +65,11 @@ exclude:
 nav:
   - name: about
     url: /
-  - name: publications
-    url: /publications/
+  - name: research
+    url: /research/
   - name: blog
     url: /blog/
   - name: math projects
-    url: /notes/
+    url: /math-projects/
   - name: free help
     url: /free-help/

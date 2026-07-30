@@ -1,7 +1,7 @@
 ---
 layout: default
 title: math projects
-permalink: /notes/
+permalink: /math-projects/
 ---
 <div class="notes-page">
   <h1 class="page-title">math projects</h1>

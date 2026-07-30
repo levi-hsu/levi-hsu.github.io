@@ -1,10 +1,10 @@
 ---
 layout: default
-title: publications
-permalink: /publications/
+title: Research
+permalink: /research/
 ---
 <div class="publications-page">
-  <h1 class="page-title">publications</h1>
+  <h1 class="page-title">Research</h1>
 
   {% assign pubs = site.data.publications | where_exp: "p", "p.title" %}
   {% if pubs.size > 0 %}
