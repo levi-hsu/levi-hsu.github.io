@@ -681,6 +681,7 @@ sup {
   flex-wrap: wrap;
   gap: 0.4rem;
   margin-bottom: 0.8rem;
+  overflow: visible;
 }
 
 .pub-abstract {
@@ -694,6 +695,148 @@ sup {
 
 .note-tags {
   margin-bottom: 0.6rem;
+}
+
+.availability-tags {
+  margin-bottom: 0.6rem;
+}
+
+.availability-tag {
+  border: 1px solid transparent;
+  font-weight: 600;
+}
+
+.availability-tag-downloadable {
+  background: #e8f5e9;
+  color: #2e7d32;
+  border-color: #a5d6a7;
+}
+
+.availability-tag-unavailable {
+  background: #ffebee;
+  color: #c62828;
+  border-color: #ef9a9a;
+}
+
+.citation-hover {
+  display: inline-block;
+  position: relative;
+}
+.citation-hover::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 100%;
+  height: 0.45rem;
+}
+
+.citation-card {
+  position: absolute;
+  left: 0;
+  top: calc(100% + 0.45rem);
+  z-index: 20;
+  width: min(560px, 100vw - 3rem);
+  max-width: 85vw;
+  padding: 1rem;
+  background: var(--modal-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  color: var(--text-muted);
+  font-size: 0.84rem;
+  line-height: 1.6;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-4px);
+  transition: opacity 0.15s, transform 0.15s;
+}
+.citation-card pre {
+  margin: 0;
+  padding: 0.9rem 0.9rem 0.9rem 0.8rem;
+  background: var(--code-bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--text);
+  font-size: 0.76rem;
+  line-height: 1.45;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.citation-card-label {
+  display: block;
+  color: var(--text);
+  font-weight: 600;
+}
+
+.citation-copy {
+  flex-shrink: 0;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 0.12rem 0.45rem;
+  background: var(--bg-alt);
+  color: var(--text-muted);
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 0.7rem;
+  font-weight: 600;
+  line-height: 1.5;
+  transition: color 0.15s, border-color 0.15s, background 0.15s;
+}
+.citation-copy:hover, .citation-copy:focus {
+  background: var(--btn-hover-bg);
+  border-color: var(--btn-hover-bg);
+  color: var(--btn-hover-text);
+}
+.citation-copy.copied {
+  border-color: #4caf50;
+  color: #2e7d32;
+}
+
+.citation-code {
+  position: relative;
+  margin-top: 0.45rem;
+}
+
+.citation-copy-corner {
+  position: absolute;
+  top: 0.45rem;
+  right: 0.45rem;
+  background: rgba(85, 85, 85, 0.88);
+  border-color: transparent;
+  border-radius: 999px;
+  color: #ffffff;
+  font-size: 0.7rem;
+  padding: 0.12rem 0.55rem;
+}
+.citation-copy-corner:hover, .citation-copy-corner:focus {
+  background: var(--btn-hover-bg);
+  border-color: transparent;
+  color: var(--btn-hover-text);
+}
+.citation-copy-corner.copied {
+  background: #2e7d32;
+  border-color: transparent;
+  color: #ffffff;
+}
+
+.citation-hover:hover .citation-card,
+.citation-hover:focus-within .citation-card {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+[data-theme=dark] .availability-tag-downloadable {
+  background: #14351d;
+  color: #81c784;
+  border-color: #2e7d32;
+}
+[data-theme=dark] .availability-tag-unavailable {
+  background: #3d1719;
+  color: #ef9a9a;
+  border-color: #c62828;
 }
 
 /* ── Update log ── */
