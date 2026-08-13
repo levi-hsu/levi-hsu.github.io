@@ -10,7 +10,8 @@
 
     var href = a.getAttribute('href');
     // Skip: external links, hash-only anchors, BIB buttons, download links
-    if (!href || href.startsWith('#') || href.startsWith('mailto:') ||
+    if (!href || href.startsWith('#') || a.hash ||
+        href.startsWith('mailto:') ||
         a.hostname !== location.hostname || a.hasAttribute('download') ||
         a.target === '_blank') return;
 
@@ -186,6 +187,36 @@
     a.className = 'toc-' + h.tagName.toLowerCase();
     nav.appendChild(a);
   });
+
+  const sidebar = document.getElementById('toc-sidebar');
+  const toggle = document.getElementById('toc-toggle');
+
+  function closeToc() {
+    if (!sidebar || !toggle) return;
+    sidebar.classList.remove('open');
+    toggle.setAttribute('aria-expanded', 'false');
+  }
+
+  if (sidebar && toggle) {
+    toggle.addEventListener('click', function () {
+      const isOpen = sidebar.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+
+    nav.addEventListener('click', function (e) {
+      if (e.target.closest('a')) closeToc();
+    });
+
+    document.addEventListener('click', function (e) {
+      if (!sidebar.classList.contains('open')) return;
+      if (sidebar.contains(e.target) || toggle.contains(e.target)) return;
+      closeToc();
+    });
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') closeToc();
+    });
+  }
 
   // Highlight active section on scroll
   const tocLinks = nav.querySelectorAll('a');
