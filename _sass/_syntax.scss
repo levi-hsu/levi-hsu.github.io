@@ -1,0 +1,194 @@
+/* Rouge syntax highlighting */
+.highlighter-rouge,
+.highlight {
+  color: #d4d4d4;
+}
+
+.highlight {
+  background: var(--code-bg);
+  border-radius: 6px;
+  margin-bottom: 1.2em;
+  overflow-x: auto;
+
+  pre {
+    margin-bottom: 0;
+  }
+
+  code {
+    color: inherit;
+  }
+}
+
+.highlight,
+pre.highlight {
+  .c,
+  .ch,
+  .cm,
+  .c1,
+  .cs {
+    color: #6a9955;
+    font-style: italic;
+  }
+
+  .k,
+  .kc,
+  .kd,
+  .kn,
+  .kp,
+  .kr,
+  .kt,
+  .ow {
+    color: #569cd6;
+  }
+
+  .s,
+  .sb,
+  .sc,
+  .sd,
+  .s2,
+  .se,
+  .sh,
+  .si,
+  .sx,
+  .sr,
+  .s1,
+  .ss {
+    color: #ce9178;
+  }
+
+  .m,
+  .mb,
+  .mf,
+  .mh,
+  .mi,
+  .il,
+  .mo {
+    color: #b5cea8;
+  }
+
+  .nf,
+  .fm {
+    color: #dcdcaa;
+  }
+
+  .nc,
+  .nn,
+  .nt {
+    color: #4ec9b0;
+  }
+
+  .nb,
+  .bp,
+  .vc,
+  .vg,
+  .vi {
+    color: #9cdcfe;
+  }
+
+  .no,
+  .na,
+  .nd,
+  .ne,
+  .nv {
+    color: #4fc1ff;
+  }
+
+  .o,
+  .p {
+    color: #d4d4d4;
+  }
+
+  .err {
+    color: #f44747;
+  }
+}
+
+[data-theme="light"] {
+  .highlighter-rouge,
+  .highlight {
+    color: #24292f;
+  }
+
+  .highlight,
+  pre.highlight {
+    .c,
+    .ch,
+    .cm,
+    .c1,
+    .cs {
+      color: #6a737d;
+    }
+
+    .k,
+    .kc,
+    .kd,
+    .kn,
+    .kp,
+    .kr,
+    .kt,
+    .ow {
+      color: #d73a49;
+    }
+
+    .s,
+    .sb,
+    .sc,
+    .sd,
+    .s2,
+    .se,
+    .sh,
+    .si,
+    .sx,
+    .sr,
+    .s1,
+    .ss {
+      color: #032f62;
+    }
+
+    .m,
+    .mb,
+    .mf,
+    .mh,
+    .mi,
+    .il,
+    .mo {
+      color: #005cc5;
+    }
+
+    .nf,
+    .fm {
+      color: #6f42c1;
+    }
+
+    .nc,
+    .nn,
+    .nt {
+      color: #22863a;
+    }
+
+    .nb,
+    .bp,
+    .vc,
+    .vg,
+    .vi {
+      color: #005cc5;
+    }
+
+    .no,
+    .na,
+    .nd,
+    .ne,
+    .nv {
+      color: #e36209;
+    }
+
+    .o,
+    .p {
+      color: #24292f;
+    }
+
+    .err {
+      color: #b31d28;
+    }
+  }
+}
