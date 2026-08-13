@@ -3,10 +3,8 @@ layout: post
 title: "SFT vs. RL for Text-to-SQL: A Controlled Comparison at 3B Scale"
 date: 2026-08-13
 tags:
-  - text-to-sql
   - reinforcement learning
   - fine-tuning
-abstract: "A controlled 3B-scale comparison of SFT and RL for text-to-SQL, showing that post-training improves Spider in-distribution accuracy while worsening retention on BIRD out-of-distribution evaluation."
 image: "/assets/img/text-to-sql/fig1_execution_accuracy_by_model.png"
 ---
 
