@@ -3,8 +3,9 @@ layout: post
 title: "SFT vs. RL for Text-to-SQL: A Controlled Comparison at 3B Scale"
 date: 2026-08-13
 tags:
-  - reinforcement learning
+  - LLM
   - fine-tuning
+  - reinforcement learning
 image: "/assets/img/text-to-sql/fig1_execution_accuracy_by_model.png"
 ---
 
