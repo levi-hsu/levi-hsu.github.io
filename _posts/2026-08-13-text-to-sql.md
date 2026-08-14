@@ -21,7 +21,7 @@ Execution accuracy alone cannot tell us *how* a text-to-SQL model is wrong. Two 
 
 This project studies a narrower and more answerable version of the question considered in recent large-scale work. SQL-R1, Reasoning-SQL, and Arctic-Text2SQL-R1 all report that RL post-training outperforms SFT-only baselines by several execution-accuracy points at the 7B-32B parameter scale, with compute budgets far beyond a single consumer GPU. Here, we ask whether the same *direction* of effect still appears at 3B scale on hardware that is easy to replicate. We also study a question those papers do not report: which specific failure modes are actually corrected by each post-training method.
 
-There are two main findings. First, the benefit of post-training is entirely in-distribution: every post-trained model generalizes worse from Spider to BIRD than the untouched zero-shot model. At this scale, this is opposite to what a general claim that "RL improves generalization" would suggest. Second, the error analysis explains this behavior directly by showing which error categories decrease and which increase after post-training.
+There are two main findings. First, the observed benefit of post-training is entirely in-distribution: every post-trained model improves on Spider but performs worse than the untouched zero-shot model on BIRD. Thus, in this experiment, better in-distribution performance does not translate into better out-of-distribution performance. Second, the error analysis helps explain this result by showing how the error distribution changes after post-training.
 
 ## Related work
 
