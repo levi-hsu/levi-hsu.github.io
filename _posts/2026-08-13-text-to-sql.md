@@ -288,16 +288,16 @@ The BIRD continue cross-database EX results for all six variants are shown below
 
 | model | BIRD continue cross-database EX |
 |---|---|
-| rl-continue (GRPO) | 0.2035 |
-| rl-continue-rloo | 0.2054 |
-| rl-continue-drgrpo | 0.2035 |
-| rl-continue-v2 (GRPO) | 0.2035 |
-| rl-continue-v2-rloo | 0.2007 |
-| rl-continue-v2-drgrpo | 0.2026 |
+| rl-continue-GRPO | 0.2035 |
+| rl-continue-RLOO | 0.2054 |
+| rl-continue-Dr.GRPO | 0.2035 |
+| rl-continue-v2-GRPO | 0.2035 |
+| rl-continue-v2-RLOO | 0.2007 |
+| rl-continue-v2-Dr.GRPO | 0.2026 |
 
 The total spread across the six variants is 0.0047. On a 1071-example evaluation set, this is an order of magnitude smaller than the gap between the Spider eval and BIRD eval results of any individual model and is well within noise. Neither changing the advantage estimator nor using the two-phase curriculum in the v2 variants changes this number in a consistent direction. Therefore, this experiment gives a null result rather than evidence in favor of whichever variant happens to obtain the highest value.
 
-## A harder test: adapting to BIRD with a little real data
+## Adapting to BIRD with a little real data
 
 The second experiment is a harder adaptation test. Starting from the Spider-only SFT checkpoint, we continue training on a small pool of 122 real BIRD examples from two schemas, `california_schools` and `debit_card_specializing`. We compare SFT-continue and RL-continue on three evaluation slices: Spider eval, to check whether continuing on BIRD removes Spider competence; the BIRD continue same-schema slice, which uses the same two schemas but unseen questions and therefore serves as a memorization check; and the BIRD continue cross-database slice, which contains seven databases completely disjoint from the training pool and serves as the actual transfer test.
 
