@@ -63,7 +63,7 @@ peft_config = LoraConfig(
 model = get_peft_model(model, peft_config)
 ```
 
-Only the adapter is updated or saved, while the base model on disk remains unchanged. This allows the RL model to reload the same frozen base model later and initialize from the SFT adapter. Qwen2.5-Coder-7B-Instruct-GPTQ-Int8 is evaluated only as a zero-shot reference and is never trained. It is excluded from the controlled comparison because it differs from the 3B model in three confounded dimensions at the same time: parameter count, quantization scheme, and training status. Therefore, any performance difference against this model cannot be attributed to a single factor.
+Only the adapter is updated or saved, while the base model on disk remains unchanged. This allows the RL model to reload the same frozen base model later and initialize from the SFT adapter. 
 
 ### Datasets
 
