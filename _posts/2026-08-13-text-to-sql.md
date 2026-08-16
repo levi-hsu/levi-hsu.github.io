@@ -15,6 +15,9 @@ bibtex: |
     howpublished = {\url{https://levi-hsu.github.io/blog/2026/text-to-sql/}},
     note         = {Blog post}
   }
+updates:
+  - date: 2026-08-16
+    note: "Add BibTeX and update the content."
 ---
 
 ## Abstract
