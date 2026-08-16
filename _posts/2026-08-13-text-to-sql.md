@@ -17,7 +17,7 @@ bibtex: |
   }
 updates:
   - date: 2026-08-16
-    note: "Add BibTeX and update the content."
+    note: "Add BibTeX and edit the content."
 ---
 
 ## Abstract
