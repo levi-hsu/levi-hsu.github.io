@@ -31,7 +31,7 @@ This project studies a narrower and more answerable version of the question cons
 
 There are two main findings. First, the observed benefit of post-training is entirely in-distribution: every post-trained model improves on Spider but performs worse than the untouched zero-shot model on BIRD. Thus, in this experiment, better in-distribution performance does not translate into better out-of-distribution performance. Second, the error analysis helps explain this result by showing how the error distribution changes after post-training.
 
-## Related work
+## Related Work
 
 SQL-R1, Reasoning-SQL, and Arctic-Text2SQL-R1 train Qwen2.5-Coder-family models with GRPO-style, execution-verifiable rewards, and report that RL post-training improves over SFT-only baselines by several execution-accuracy points at 7B-32B scale. In particular, Arctic-Text2SQL-R1 finds that a simple execution-only reward performs better than more complicated partial-credit reward schemes, and that initializing RL from a converged SFT checkpoint performs better than starting RL from an untrained base. This project adopts both design choices directly instead of re-deriving them. Since Qwen2.5-Coder is also the shared base-model family in this literature and OmniSQL, the 3B-scale results here are comparable in type, although not necessarily in magnitude, to those papers.
 
@@ -39,7 +39,7 @@ None of the papers above reports a per-category error breakdown. They report agg
 
 ## Method
 
-### Model and quantization
+### Model and Quantization
 
 All models use exactly the same base model, Qwen2.5-Coder-3B-Instruct. Therefore, the architecture, parameter count, and tokenizer are fixed, and only the post-training procedure changes. Training uses QLoRA: the base weights are quantized to 4-bit NF4 at loading time and then frozen, while LoRA adapters are trained on top in bf16. Since the term "QLoRA" alone does not show the actual configuration choices, the implementation used in this project is given below:
 
@@ -77,7 +77,7 @@ Only the adapter is updated or saved, while the base model on disk remains uncha
 
 Spider train (full) and Spider eval are the main training and in-distribution evaluation sets. Spider train (filtered), the 2000-example subset actually used for training, is a filtered subset of the 8659-example Spider train (full) release rather than the entire training split. BIRD eval is used as the out-of-distribution set. It is not used for training in any of the four core models, so we use the accuracy gap between Spider eval and BIRD eval as a simple measure of the OOD performance drop. BIRD train, the official training split, is excluded entirely because its per-database files are large enough to be impractical on this hardware, with multi-GB data across roughly 70 real-world databases. Thus, no BIRD-derived data enters the training of the four core models, and BIRD eval remains a clean OOD set. Experiment 2 later trains on a small slice taken from BIRD eval itself, rather than BIRD train; this is a separate and deliberate choice discussed in that section. Spider-DK is also excluded from the core comparison, so the generalization result is based on only one OOD set. This limitation is stated explicitly below.
 
-### Experimental models
+### Experimental Models
 
 We consider four models, and evaluate each of them on both Spider eval and BIRD eval:
 
@@ -88,7 +88,7 @@ We consider four models, and evaluate each of them on both Spider eval and BIRD 
 
 RL-v2 is introduced because the first RL run obtains exactly the same Spider eval execution accuracy as SFT. The predictions are not only numerically close: they are bit-for-bit identical on 922 of 1034 examples. At the same time, this first RL run has a worse Spider-to-BIRD drop than baseline. RL-v2 therefore tests whether increasing the number of rollouts per prompt and using a denser reward signal changes the result. It does improve Spider eval accuracy from 0.6973 to 0.7128, but the generalization drop becomes worse rather than better, increasing from 0.5017 to 0.5276. The quantitative results are discussed below.
 
-### Metric: execution accuracy
+### Metric: Execution Accuracy
 
 All reported numbers use execution accuracy rather than string match. Both the predicted SQL and the gold SQL are executed on the example's real SQLite database, and a prediction is counted as correct only when it executes without error and returns the same result set as the correct query. Here, "same result" requires one additional convention: comparison is order-insensitive unless the correct query itself contains an ORDER BY clause. This follows the convention of the official Spider and BIRD evaluators, and is implemented as follows:
 
@@ -110,7 +110,7 @@ def rows_match(gold_rows, pred_rows, order_matters):
 
 Each database is opened in read-only mode. Therefore, a malformed or adversarial prediction cannot modify the database file; it simply fails to execute and is counted as incorrect.
 
-### RL implementation
+### RL Implementation
 
 The RL model uses GRPO through TRL's `GRPOTrainer`, continuing from the SFT model's LoRA adapter rather than starting from a new adapter. GRPO does not require a separate value model or reward model. Instead, the advantage is computed from the mean and standard deviation of multiple sampled completions for each prompt. This is suitable for an execution-verifiable reward and is substantially lighter on an 8GB GPU than PPO's three-model setup. The reward function directly reuses the same `execute_query` and `rows_match` functions shown above, rather than implementing them again. Therefore, the training reward and offline evaluation accuracy use exactly the same computation:
 
@@ -148,9 +148,9 @@ Degenerate outputs require a separate diagnostic because execution-based rewards
 
 For this reason, the same diagnostics are repeated periodically during RL training rather than applied only to the initial SFT checkpoint. The callback runs every few hundred optimizer steps and tracks degenerate outputs, schema hallucinations, and the other sanity-check statistics throughout training. This makes it possible to detect reward hacking or template collapse introduced by RL even when these behaviors are absent at initialization.
 
-## Applying and evaluating the three models
+## Evaluation
 
-### Quantitative results
+### Quantitative Results
 
 The full scorecard is available at `runs/blog_artifacts/experiment1_scorecard.txt`. The execution-accuracy rows are:
 
@@ -201,7 +201,7 @@ The relevant Spider eval rows below report the rate of each category among the i
 
 Every post-trained model has a lower schema-column-error rate and a lower join-structure-mismatch rate than baseline. In particular, SFT and RL are better at selecting the correct column and constructing the correct join, which is the kind of structural competence that fine-tuning on gold SQL should teach. However, `other_wrong_result`—the catch-all category for executable wrong-result queries that are not captured by the structural checks above—increases from 0.2705 for baseline to about 0.35-0.37 after post-training. Manual inspection shows that many of these errors involve wrong values, plausible but incorrect columns, or incorrect conditions. Therefore, post-training does not reduce all types of errors uniformly. The error distribution shifts away from some structural errors and toward the residual `other_wrong_result` category, which contains many value-level mistakes in our manual inspection. On Spider eval, the net effect is still a large accuracy improvement. On BIRD eval, the same trade-off remains visible, but the net effect changes sign. This error shift helps explain the generalization drop above: the types of mistakes reduced on Spider are not necessarily the ones that dominate on BIRD.
 
-### Case studies
+### Case Studies
 
 **A clean structural fix.** Consider the same Spider eval question from `concert_singer`: "What are all distinct countries where singers above age 20 are from?" Baseline, SFT, and RL-v2 all answer this question. The gold SQL uses only one table:
 
@@ -271,7 +271,7 @@ The three case studies above illustrate schema linking, syntax errors, and out-o
 
 **Schema hallucination.** For the question "Show the name and the release year of the song by the youngest singer.", SFT joins `singer` with a table named `song`. However, this table does not exist in the database; the song-related attributes are stored directly in `singer`. SQLite therefore returns `no such table: song`. This example shows a table-level schema hallucination rather than the more common case of predicting a nonexistent column.
 
-### Does the RL algorithm choice matter?
+### Does the RL algorithm Choice Matter?
 
 RLOO and Dr. GRPO are evaluated as algorithm-swap replicates of the RL-continue setup below. The starting checkpoint and training data are kept fixed, and only the optimizer's advantage estimator is changed:
 
@@ -305,7 +305,7 @@ The BIRD continue cross-database EX results for all six variants are shown below
 
 The total spread across the six variants is only 0.0047, corresponding to about five examples on a 1071-example evaluation set. Neither changing the advantage estimator nor using the two-phase curriculum in the v2 variants changes this number in a consistent direction. Therefore, this experiment does not provide evidence that changing the advantage estimator improves performance.
 
-## Adapting to BIRD with a little real data
+## Adapting to BIRD
 
 The second experiment studies adaptation using a small amount of real BIRD data. Starting from the Spider-only SFT checkpoint, we continue training on a small pool of 122 real BIRD examples from two schemas, `california_schools` and `debit_card_specializing`. We compare SFT-continue and RL-continue on three evaluation slices: Spider eval, to check whether continuing on BIRD removes Spider competence; the BIRD continue same-schema slice, which uses the same two schemas but unseen questions and therefore serves as a same-schema generalization check; and the BIRD continue cross-database slice, which contains seven databases completely disjoint from the training pool and serves as the actual transfer test.
 
@@ -327,7 +327,7 @@ Second, RL-continue performs much worse on the BIRD continue same-schema slice: 
 
 Training reward increases during the run, so the policy is optimizing the training objective, while BIRD continue same-schema EX drops within the first ten steps and then remains at one correct example for the rest of training. The degenerate-output rate stays at 0.0 and the schema-hallucination rate remains unchanged, so the failure is neither template collapse nor learning to repeatedly output a fixed placeholder. The health monitoring designed for these failure modes confirms this directly. A more plausible explanation is that training reward becomes less aligned with actual correctness on such a small training pool. With only 122 training examples, a 40-step GRPO run can increase its own training-batch reward, partly through the partial-credit term for "executed but wrong", without transferring this improvement to the BIRD continue same-schema questions. SFT-continue optimizes a fixed supervised loss directly against gold SQL rather than a sampled partial-credit reward, so it is not exposed to the same failure mode, which is consistent with its higher same-schema result.
 
-## Discussion and limitations
+## Discussion and Limitations
 
 The training data in this project is much smaller than the training data used in SQL-R1, Reasoning-SQL, and Arctic-Text2SQL-R1. Therefore, our accuracy numbers are not directly comparable with the results in those papers. We mainly compare whether SFT and RL show similar trends, but the difference in model and training scale should still be kept in mind.
 
