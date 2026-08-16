@@ -321,7 +321,12 @@ Training reward increases during the run, so the policy is optimizing the traini
 
 ## Discussion and limitations
 
-The training data used in this project is much smaller than that used in SQL-R1, Reasoning-SQL, and Arctic-Text2SQL-R1. Therefore, the absolute accuracy values should not be directly compared with the results reported in those papers. We can only compare whether the results follow the same general pattern, and even this comparison should be made carefully because of the large difference in scale. In addition, our generalization analysis uses only one out-of-distribution dataset, BIRD eval. Therefore, we cannot determine whether the larger accuracy drop after post-training is specific to BIRD or also appears on other OOD datasets. Finally, the error taxonomy uses regex-based structural checks rather than a full SQL parser, and it is applied only after execution has already shown that a prediction is wrong. As a result, the taxonomy has some known limitations. For example, `table_reference_mismatch` only detects table names that directly follow FROM or JOIN, so it does not detect tables that appear only inside a subquery.
+The training data in this project is much smaller than the training data used in SQL-R1, Reasoning-SQL, and Arctic-Text2SQL-R1. Therefore, our accuracy numbers are not directly comparable with the results in those papers. We mainly compare whether SFT and RL show similar trends, but the difference in model and training scale should still be kept in mind.
+
+Our out-of-distribution evaluation also uses only one dataset, BIRD eval. Therefore, the results only show that post-training performs worse on BIRD in this experiment. We cannot conclude that the same behavior will appear on other OOD datasets.
+
+The error taxonomy also has some limitations. It uses regex-based rules instead of a full SQL parser, and the rules are applied only after execution shows that a prediction is wrong. Some types of errors may therefore be missed. For example, `table_reference_mismatch` only checks table names that directly follow FROM or JOIN, so it cannot detect a table that appears only inside a subquery.
+
 
 ## Reproducibility
 
