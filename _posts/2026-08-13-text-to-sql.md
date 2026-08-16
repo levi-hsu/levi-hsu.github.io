@@ -9,11 +9,11 @@ tags:
 image: "/assets/img/text-to-sql/fig1_execution_accuracy_by_model.png"
 bibtex: |
   @misc{hsu2026sftvsrltexttosql,
-    title        = {SFT vs. RL for Text-to-SQL: A Controlled Comparison at 3B Scale},
-    author       = {Hsu, Le-Rong},
-    year         = {2026},
+    title = {SFT vs. RL for Text-to-SQL: A Controlled Comparison at 3B Scale},
+    author = {Hsu, Le-Rong},
+    year = {2026},
     howpublished = {\url{https://levi-hsu.github.io/blog/2026/text-to-sql/}},
-    note         = {Blog post}
+    note = {Blog post}
   }
 updates:
   - date: 2026-08-16

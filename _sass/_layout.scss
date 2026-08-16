@@ -164,7 +164,8 @@
   padding: 1em;
   font-size: 0.8rem;
   white-space: pre-wrap;
-  word-break: break-all;
+  overflow-wrap: anywhere;
+  word-break: normal;
   margin-bottom: 0.5rem;
   transition: background 0.15s;
   &:hover { background: var(--bg-alt); }
